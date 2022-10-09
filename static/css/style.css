@@ -1,0 +1,105 @@
+#img-logo{
+    width: 9%;
+    height: 9%
+    }
+    #barra{
+        max-height: 80px;
+        background-image: linear-gradient(to top, #020a3a 0%, #191970 80%);
+        
+    }
+    
+    #barra-blue{
+        color: white;
+        background-color:hsl(240, 64%, 27%)
+    
+    }
+    #barra-blue{
+       text-align:center;
+       padding: auto;
+       
+       
+    }
+    
+    #redes{
+        text-align: left;
+    
+    }
+    #idioma{
+        border-radius: 4px ;
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        padding: 4px;
+    
+    }
+    #idioma{
+        text-align: end;
+        display:block;
+    }
+    #telefono{
+        text-align: center;
+    }
+    #galeria{
+        text-align: end;
+    }
+    #container-fluid{
+        font-size: 30pt;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    #navbar-nav-scroll{
+        --bs-scroll-height: 100px;
+    }
+    #nav-link{
+        text-align: right; 
+        padding-right: 480px;
+        color: white;
+    }
+    #btn{
+        border-color: antiquewhite; 
+        color:white;
+        font-size: 10px;
+    }
+    #button1{
+        background-color: #191970;
+        border-color: #191970;
+    
+    }
+    #button2{
+        background-color:#daaf37;
+        border-color: #daaf37;
+    }
+    #mb-3{
+        
+        color: white;
+        align-content: center;
+    }
+    #card-text{
+        font-size:15pt; 
+        font-style: oblique;
+        text-align: left;
+    }
+    #col{
+        font-size: 12px;
+    }
+    #navbar-brand{
+        font-size: 35px;
+        color: white;
+        font-family: montserrat;
+    }
+    #footer{
+        background-image: linear-gradient(to top, #191970  0%,  #020a3a 80%);
+    color: white;
+    }
+    #col-md-6 {
+        text-align: center;
+        
+    }
+    #col{
+        text-align: left;
+        
+    }
+    #order-5{
+        text-align: right;
+    }
+    
