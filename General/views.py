@@ -2,12 +2,8 @@ from urllib import request
 from django.shortcuts import render
 
 
-def holamundo(request):
-    titulo="Inicio"
-    nombre="Angelica Montealegre"
-
+def inicio(request):
     context={
-        "nombres" :nombre,
-        "titulo" :titulo
+        
     }
     return render(request,"index.html",context)
