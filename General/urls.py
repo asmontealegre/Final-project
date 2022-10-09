@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from General.views import holamundo
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",holamundo , name="inicio"),
 ]
