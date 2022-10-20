@@ -25,4 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",inicio , name="inicio"),
     path('promocion/', include('promocion.urls')),
+    
 ]

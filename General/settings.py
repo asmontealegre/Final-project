@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
+    'habitacion',
+    'pqrs',
     'promocion',
+    'reserva',
 ]
 
 MIDDLEWARE = [
