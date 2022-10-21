@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'habitacion',
     'pqrs',
     'promocion',
+    'administracion',
     'reserva',
 ]
 

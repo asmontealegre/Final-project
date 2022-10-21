@@ -1,18 +1,21 @@
 from django.db import models
-
+from administracion.models import Usuario
+from habitacion.models import Habitacion
+from promocion.models import Promocion
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 # Reserva.
 class Reserva(models.Model):
-    cantidadHabitaciones=models.CharField(_max_length=2, verbose_name="Cantiadad de Habitaciones")
-    numeroHuespedes=models.CharField(_max_length=2, verbose_name="Numero de Huespedes")
-    valorReserva=models.CharField(_max_length=7, verbose_name="Valor de Reserva")
-    metodoPago=models.CharField(_max_length=45, verbose_name="Metodo de Pago")
-    class Estado(models.Model):
+    cantidadHabitaciones=models.CharField(max_length=2, verbose_name="Cantiadad de Habitaciones")
+    numeroHuespedes=models.CharField(max_length=2, verbose_name="Numero de Huespedes")
+    valorReserva=models.CharField(max_length=7, verbose_name="Valor de Reserva")
+    metodoPago=models.CharField(max_length=45, verbose_name="Metodo de Pago")
+    class Estado(models.TextChoices):
         ACTIVO='1', _('Activo')
         INACTIVO='0', _('Inactivo')
-    estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, Verbose_name="Estado")
-    Usuarios=models.ForeignKey(Usuarios, on_delete=models.CASCADE, verbose_name="Usuarios")
+    estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
+    usuario=models.ForeignKey(Usuario, on_delete=models.CASCADE, verbose_name="Usuarios")
 
 # Detalle Reserva.
 class DetalleReserva(models.Model):
