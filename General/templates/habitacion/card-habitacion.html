@@ -1,0 +1,16 @@
+{% load static %}
+<div class="col my-3 ">
+    <div>
+        <h3 >Habitación {{habitacion.tipoHabitacion}}</h3></div>
+    
+    <div class="card border-0 shadow-lg" style="width: 25rem;">
+        <img src="{% static 'img\sencilla.1.jpg' %}"  class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text"  id="card-text">{{habitacion.tipoHabitacion.descripcionTipoHabitacion}}</p>
+        </div>
+        
+          <li class="list-group-item border-0 shadow-lg">Ventilador $30.000<br><a href="/HotelBosque/Reservas/">Reservar</a></li>
+          <li class="list-group-item border-0 shadow-lg">Acondicionado $35.000<br><a href="/HotelBosque/error404.html">Reservar</a> </li>
+        
+      </div>
+</div>
