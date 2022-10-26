@@ -14,14 +14,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Hotel{{titulo}}</title>
+    <title>Hotel la Estación - {{titulo}}</title>
 </head>
 <body>
     {% include "partials/header.html" %}
 
+    <div class=" p-5">
     {% block contenido %}
     {% endblock contenido %}
-
+</div>
     {% include "partials/footer.html" %}
 </body>
 </html>
