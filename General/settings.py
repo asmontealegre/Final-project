@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'promocion',
     'administracion',
     'reserva',
+    'usuarios',
 ]
 
 MIDDLEWARE = [

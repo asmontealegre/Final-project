@@ -28,104 +28,69 @@
              with font-awesome or any other icon font library -->
 
 
-        <li class="nav-header">Administracion</li>
+        <li class="nav-header">Usuarios</li>   
         <li class="nav-item">
           <a href="pages/mailbox/compose.html" class="nav-link">
-            <i class="nav-icon fas fa-hotel"></i>
-            <p>Ini</p>
+            <i class="nav-icon fas fa-user-plus"></i>
+            <p>Crear Usuario</p>
           </a>
-        </li>
+        </li>     
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-user-circle"></i>
-            <p>
-              Usuarios
-              <i class="fas fa-angle-left right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{% url 'usuarios-crear' %}" class="nav-link">
+              <a href=# class="nav-link">
                 <i class="nav-icon fas fa-users"></i>
                 <p>Ver Usuarios</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="pages/mailbox/compose.html" class="nav-link">
-                <i class="nav-icon fas fa-user-plus"></i>
-                <p>Crear Usuario</p>
-              </a>
-            </li>
-
-          </ul>
+            
         </li>
+        <li class="nav-header">Reservas</li>   
+          <li class="nav-item">
+            <a href=# class="nav-link">
+              <i class="nav-icon fas fa-calendar days"></i>
+              <p>Crear Reservas</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pages/mailbox/compose.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Usuarios Registrados</p>
+            </a>
+          </li>
+        </li> 
+        <li class="nav-header">Recepcion</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-bed"></i>
+            <p>
+              Habitaciones
+            </p>
+          </a>
+        </li>
+        <li class="nav-header">PQRS</li>
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-address-book"></i>
             <p>
-              PQRS
-              <i class="fas fa-angle-left right"></i>
+              PQRS Registradas
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{% url 'usuarios-crear' %}" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
                 <p>Responder PQRS</p>
               </a>
             </li>
           </ul>
         </li>
+        <li class="nav-header">Salir</li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-bell concierge"></i>
-            <p>
-              Reserva
-              <i class="fas fa-angle-left right"></i>
-            </p>
+          <a href="pages/mailbox/compose.html" class="nav-link">
+            <i class="nav-icon fas fa-power-off"></i>
+            <p>Salir</p>
           </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{% url 'usuarios-crear' %}" class="nav-link">
-                <i class="nav-icon fas fa-calendar days"></i>
-                <p>Crear Reserva</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/mailbox/compose.html" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
-                <p>Registro de Clientes</p>
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-bed"></i>
-            <p>
-              Habitacion
-              <i class="fas fa-angle-left right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{% url 'usuarios-crear' %}" class="nav-link">
-                <i class="nav-icon fas fa-clock"></i>
-                <p>Recepcion</p>
-              </a>
-            </li>
-            
-        </li>
-
-
       </ul>
-      
-      <li class="nav-item">
-        <a href="pages/mailbox/compose.html" class="nav-link">
-          <i class="nav-icon fas fa-power-off"></i>
-          <p>Salir</p>
-        </a>
-      </li>
     </nav>
     <!-- /.sidebar-menu -->
   </div>

@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from administracion.forms import UsuarioForm
 
-from administracion.models import Usuario
+
 
 # Create your views here.
 
@@ -11,12 +10,10 @@ def administracion(request):
     }
     return render(request,'administracion/index-admin.html',context)
 
-def usuarios_crear(request):
-    titulo='Usuarios - Crear'
-    form= UsuarioForm()
+
+def usuarios(request):
+    titulo="Usuarios"
     context={
-        'titulo' : titulo,
-        'form':form
-        
+        'titulo':titulo
     }
-    return render(request,'administracion/admin-crear.html',context)
+    return render(request,'usuarios/usuarios.html',context)

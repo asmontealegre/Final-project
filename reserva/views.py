@@ -7,3 +7,10 @@ def reserva(request):
         
     }
     return render(request,'reserva/reserva.html',context)
+
+def usuarios(request):
+    titulo="Usuarios"
+    context={
+        'titulo':titulo
+    }
+    return render(request,'usuarios/usuarios.html',context)

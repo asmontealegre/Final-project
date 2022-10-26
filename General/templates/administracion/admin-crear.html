@@ -3,8 +3,9 @@
 
 {% block contenido %}
 <form action=''method='POST'>
-    {{form}}
+    {{form|crispy}}
     {% csrf_token%}
     <input type="submit" value='Registrar'>
 </form>
 {% endblock contenido %}
+

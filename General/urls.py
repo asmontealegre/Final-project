@@ -26,6 +26,6 @@ urlpatterns = [
     path("",inicio , name="inicio"),
     path('promocion/', include('promocion.urls')),
     path('adm/',include('administracion.urls')),
-    
+    path('user/',include('usuarios.urls')),
 ]
 
