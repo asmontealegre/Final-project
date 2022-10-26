@@ -1,11 +1,14 @@
 {% extends 'partials/body.html' %}
+{% load static %}
 {% block contenido %}
-
+<div class="container text-center my-3 border-top border-3 pt-5">
+  <p><H1 id="H1">La Estación</H1></p>
+</div>
 <div class="container-fluid">
-    <div class="row align-items-center " style="text-align: center">
+    <div class="row align-items-center pt-3 " style="text-align: center">
         <div class="col "><h3 id="h3">Habitación Cama Sencilla</h3>
             <div class="card border-0 shadow-lg" style="width: 25rem;">
-                <img src="/HotelBosque/img/sencilla.1.jpg"  class="card-img-top" alt="...">
+                <img src="{% static 'img\sencilla.1.jpg' %}"  class="card-img-top" alt="...">
                 <div class="card-body">
                   <p class="card-text"  id="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                      Deleniti officia sit, dolore aperiam illum sequi debitis vel mollitia dolores ab odit accusantium minima 

@@ -1,0 +1,33 @@
+{% extends 'partials/bodyAdmin.html' %}
+
+{% block contenido %}
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Cantidad Habitaciones</th>
+        <th scope="col">Número de Huespedes</th>
+        <th scope="col">Valor de la Reserva</th>
+        <th scope="col">Metodo de Pago</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Estado</th>
+    </thead>
+    <tbody>
+
+        
+        {% for reserva in reserva  %}
+        <tr>
+            <td>{{reserva.cantidadHabitaciones}}</td>
+            <td>{{reserva.numeroHuespedes}}</td>
+            <td>{{reserva.valorReserva}}</td>
+            <td>{{reserva.metodoPago}}</td>
+            <td>{{reserva.usuario}}</td>
+            <td>{{reserva.estado}}</td>
+            
+          </tr>
+        {% endfor %}
+        
+    </tbody>
+  </table></div>
+{% endblock contenido %}
+    

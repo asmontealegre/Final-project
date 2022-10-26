@@ -27,5 +27,7 @@ urlpatterns = [
     path('promocion/', include('promocion.urls')),
     path('adm/',include('administracion.urls')),
     path('user/',include('usuarios.urls')),
+    path('reser/',include('reserva.urls')),
+    path('habit/',include('habitacion.urls')),
 ]
 
