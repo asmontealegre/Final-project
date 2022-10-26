@@ -34,8 +34,13 @@ class Usuario(models.Model):
     tipoDocumento=models.CharField(max_length=5, choices=TipoDocumento.choices, default=TipoDocumento.CC, verbose_name="Tipo de Documento")
     numeroDocumento=models.CharField(max_length=45, verbose_name="Número de Documento")
     telefono=models.CharField(max_length=15, verbose_name="Teléfono", blank=True)
+    
+    class tipoUsuario(models.TextChoices):
+        Administrador='Administrador', _('Administrador')
+        Empleado='Empleado', _('Empleado')
+    tipoUsuario=models.CharField(max_length=13, choices=tipoUsuario.choices, default=tipoUsuario.Empleado, verbose_name="Tipo Usuario")
+    
     class Estado(models.TextChoices):
         ACTIVO=1, ('Activo')
         INACTIVO=0, ('Inactivo')
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
-    tipoUsuario=models.ForeignKey(Tipo_Usuario, on_delete=models.CASCADE, verbose_name="Tipo Usuario")

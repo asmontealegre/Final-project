@@ -1,7 +1,33 @@
 {% extends 'partials/bodyAdmin.html' %}
 
 {% block contenido %}
-    <h1>Usuarios</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Tipo de Documento</th>
+        <th scope="col">Número de Documento</th>
+        <th scope="col">Télefono</th>
+        <th scope="col">Tipo Usuario</th>
+        <th scope="col">Estado</th>
+    </thead>
+    <tbody>
 
+        
+        {% for usuario in usuarios   %}
+        <tr>
+            <td>{{usuario.nombres}}</td>
+            <td>{{usuario.apellidos}}</td>
+            <td>{{usuario.tipoDocumento}}</td>
+            <td>{{usuario.numeroDocumento}}</td>
+            <td>{{usuario.telefono}}</td>
+            <td>{{usuario.tipoUsuario}}</td>
+            <td>{{usuario.estado}}</td>
+          </tr>
+        {% endfor %}
+        
+    </tbody>
+  </table>
 {% endblock contenido %}
     
