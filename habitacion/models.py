@@ -13,7 +13,7 @@ class TipoHabitacion(models.Model):
         Doble='Doble', ('Doble')
         Campestre='Campestre', ('Campestre')
     nombreTipoHabitacion=models.CharField(max_length=10, choices=NombreTipoHabitacion.choices, default=NombreTipoHabitacion.Sencilla, verbose_name="Nombre Tipo de Habitacion")
-    complementosTipoHabitacion=models.CharField(max_length=50,blank=True, verbose_name="Complementos Tipo Habitacion")
+    complementosTipoHabitacion=models.CharField(max_length=50, verbose_name="Complementos Tipo Habitacion")
     valorTipoHabitacion=models.IntegerField(verbose_name="Valor Tipo Habitacion")
     descripcionTipoHabitacion=models.CharField(max_length=200, verbose_name="Descripcion Tipo Habitacion")
     capacidad=models.CharField(max_length=45, verbose_name="Capacidad")
@@ -28,7 +28,7 @@ class TipoHabitacion(models.Model):
 
 # Habitacion.
 class Habitacion(models.Model):
-    numeroHabitacion=models.CharField(max_length=3, verbose_name="Numero de Habitacion")
+    numeroHabitacion=models.CharField(max_length=4, verbose_name="Numero de Habitacion")
     class Estado(models.TextChoices):
         ACTIVO='1', ('Activo')
         INACTIVO='0', ('Inactivo')

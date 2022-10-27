@@ -8,11 +8,12 @@ def habitacion(request):
     habitacion_c= Habitacion.objects.filter(sede="estacion",tipoHabitacion__nombreTipoHabitacion="Campestre")[0]
     habitaciones=[habitacion_s,habitacion_d,habitacion_c]
 
-    habitaciones_b= Habitacion.objects.filter(sede="bosque")
+   
 
     context={
-        'habitaciones': habitaciones,
+        'habitaciones': habitacion_s,
         'habitacion_d': habitacion_d,
-        'habitacion_c': habitacion_c
+        'habitacion_c': habitacion_c,
+        'habitaciones': habitaciones
     }
     return render(request,'habitacion/habitacion.html',context)
