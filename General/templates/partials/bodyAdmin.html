@@ -28,18 +28,22 @@
         {% include 'partials/sidebarAdmin.html' %}
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
+        <div class="content-wrapper overflow-auto">
             {% include 'partials/headerAdmin.html' %}
+            <div class="container">
+                
+            
             {% block contenido %}
 
             {% endblock contenido %}
         </div>
+        </div>
         <!-- /.content-wrapper -->
-        {% include 'partials/footerAdmin.html' %}
+       
 
 
     </div>
-    
+    {% include 'partials/footerAdmin.html' %}
     {% block javascript %}
         {% include 'partials/jsAdmin.html' %}
     {% endblock javascript %}

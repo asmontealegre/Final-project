@@ -23,3 +23,5 @@ def usuarios(request):
         'titulo':titulo
     }
     return render(request,'usuarios/usuarios.html',context)
+
+
