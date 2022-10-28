@@ -6,7 +6,6 @@ from usuarios.views import usuarios
 
 urlpatterns = [
     path('',login,name="login"),
-    
     path('adm/', administracion,name='index-admin'),
     path('',usuarios,name="usuarios"),
     
