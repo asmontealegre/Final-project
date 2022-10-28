@@ -1,0 +1,197 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'css\sesion.css' %}">
+    <title>Sistema de Administracion</title>
+  </head>
+ 
+  <header class="fixed-top">
+      <nav  id="barra" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid d-inline-flex "> 
+              <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-lg-0" style="padding-left: 20px">
+                  <li class="nav " style="font-size: 16pt; font-family: Arial;">
+                    <a class="nav-link" style="color:#191970 ; padding-top: 30px; " href="/HotelBosque/index.html">
+                      <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom:5px;" width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                      </svg>INICIO</a>
+                  </li> 
+                </div>
+            </div>
+        </nav>
+  </header> 
+  <div class="row g-0 bg-light position-relative" > 
+    <div class="col-md-6 mb-md-0 p-md-4" style="background-color: white;">
+      <img src="/HotelBosque/img/chica.jpg" class="w-100 d-none d-lg-block" alt="...">
+    </div>
+    <div class="col-md-6 p-4 ps-md-0">
+   <div class="bg-info d-flex justify-content-center align-items-center vh-100" style="background-image: linear-gradient(to top, white 0%, white 80%)">
+    <div
+      class="bg-white p-5 rounded-5 text-secondary "
+      style="width: 25rem"
+    >
+      <div class="d-flex justify-content-center">
+        <img
+          src="/HotelBosque/img/logo.png"
+          alt="login-icon"
+          style="height: 10rem"
+        />
+      </div>
+      <div class="text-center fs-1 fw-bold" style="color: #191970 ;">Iniciar Sesión</div>
+      <div class="input-group mt-4">
+        <div class="input-group-text ;" style="background-color: #191970;">
+         
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+            <li><a class="dropdown-item" href="#">ADMINISTRACIÍN</a></li>
+            <li><a class="dropdown-item" href="#">RECEPCIÓN</a></li>
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Usuario
+          </a>
+          </ul>
+          <img
+            src="/HotelBosque/icons/username-icon.svg"
+            alt="username-icon"
+            style="height: 1rem"
+          />
+        </div>
+        
+        <input
+        class="form-control bg-light"
+        type="text"
+        placeholder="Usuario"
+      />
+    </div>
+        
+      
+      <div class="input-group mt-1">
+        <div class="input-group-text" style="background-color: #191970;">
+          <img
+            src="/HotelBosque/icons/password-icon.svg"
+            alt="password-icon"
+            style="height: 1rem"
+          />
+        </div>
+        <input
+          class="form-control bg-light"
+          type="password"
+          placeholder="Contraseña"
+        />
+      </div>
+      <div class="d-flex justify-content-around mt-1">
+        <div class="d-flex align-items-center gap-1">
+          <input class="form-check-input" type="checkbox" />
+          <div class="pt-1" style="font-size: 0.9rem">Recordarme</div>
+        </div>
+        <div class="pt-1" style="color:#191970;">
+          
+        <div class="container">
+          <article>
+            <button id="btn-abrir-popup" class="btn-abrir-popup">¿Olvidaste tu contraseña?</button>
+          </article>
+          <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+              <a href="" id="btn-cerrar-popup" class="btn-cerrar-popup"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg></a>
+              <h3>¿Olvidaste tu contraseña?</h3>
+               <h4>No te preocupes. Escribe tu email y te enviaremos las instrucciones para recuperarla</h4>
+               <form action="">
+                <div class="container-inputs"id="container-inputs">
+                  <div class="input-group mt-1">
+                    <div class="input-group-text" style="background-color: #191970;">
+                      <img
+                        src=""
+                        alt=""
+                        style="height: 1rem"
+                      /><svg xmlns="http://www.w3.org/2000/svg" style="color: white;" width="16" height="16" fill="currentColor " class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                      </svg>
+                    </div>
+                    <input
+                      class="form-control bg-light "
+                      type="email"
+                      placeholder="Correo"
+                    />
+                  </div>
+                </div>
+                <input type="submit" class="btn-submit" id="btn-submit" value="Recuperar contraseña"><br>
+              
+               </form>
+            </div>
+          </div>
+        </div> 
+        
+      </div>
+      </div>
+      <a href="{% url 'index-admin' %}" class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" style="background-color: #191970;">
+        Iniciar Sesión
+      </a>
+      <div class="d-flex justify-content-center mt-1">
+        <div>No tienes una cuenta?</div>
+        <a href="{% url 'index-admin' %}" class="text-decoration-none text-info fw-semibold"
+          >Registrarse</a
+        >
+      </div>
+      <div class="p-3">
+        <div class=" text-center" style="height: 0.9rem">
+          <span class="bg-white ">or</span>
+        </div>
+      </div>
+      <div
+        class="btn d-flex gap-2 justify-content-center border mt-1 shadow-sm">
+        <img src="/HotelBosque/icons/google-icon.svg" alt="google-icon"
+            style="height: 1.6rem"/>
+        <a class="text-decoration-none fw-semibold text-secondary" href="https://accounts.google.com/AddSession/identifier?hl=es&continue=https%3A%2F%2Fwww.google.com%2F%3Fhl%3Des&ec=GAlAmgQ&flowName=GlifWebSignIn&flowEntry=AddSession" >Continuar con Google</a>
+      </div>
+      <div
+        class="btn d-flex gap-2 justify-content-center border mt-3 shadow-sm">
+        <img src="/HotelBosque/icons/icons8-facebook-nuevo.svg" alt="facebook-icon"
+            style="height: 1.6rem"/>
+        <a class="text-decoration-none fw-semibold text-secondary" href="https://es-la.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjYxNDM5MTYxLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D"  >Continuar con Facebook</a>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+<footer>
+<div class="container" style="text-align: center;"><span class="tex-muted">
+  © Hotel el Bosque-2022
+  
+    <script>document.write(new Date().getFullYear())</script>
+</span></div>
+<div class="text-center">
+<button type="button" class="btn btn-link">Ayuda</button>
+</div>
+</footer>
+   
+
+
+
+    
+</body>
+</html>

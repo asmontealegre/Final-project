@@ -29,5 +29,7 @@ urlpatterns = [
     path('user/',include('usuarios.urls')),
     path('reser/',include('reserva.urls')),
     path('habit/',include('habitacion.urls')),
+    path('pqrs/',include('pqrs.urls')),
+    
 ]
 

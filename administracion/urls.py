@@ -1,11 +1,16 @@
 
 from django.urls import path
 
-from administracion.views import administracion
+from administracion.views import login, administracion
 from usuarios.views import usuarios
 
 urlpatterns = [
-    path('', administracion,name='administracion'),
+    path('',login,name="login"),
+    
+    path('adm/', administracion,name='index-admin'),
     path('',usuarios,name="usuarios"),
+    
+    
+    
     
 ]

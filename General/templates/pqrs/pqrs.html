@@ -1,7 +1,126 @@
-{% extends "partials/body.html" %}
-{% load static %}
+{% extends 'partials/body.html' %}
+{% load crispy_forms_tags %}
+
 {% block contenido %}
+<div class="container">
+    <form action="" method="POST">
+        {{form|crispy}}
+        {% csrf_token %}
+        <input type="submit" value="Registrar">
+    </form>
+</div>
+
+<article> <!--inicio article-->
+    <div class="container"> <!--inicio container-->
+      <form class="row mt-5 needs-validation" id="formulario" novalidate> <!--inicio formulario-->
+        
+        <div class="col-sm-6"> <!--inicio formulario datos solicitante-->
+         
+            <legend>DATOS SOLICITANTE</legend>
+          <div class="col-8 g-3 mt-2">
+            <label for="nombresInput" class="form-label">Nombres</label>
+            <input type="text" class="form-control" name="PQR" id="nombresInput" placeholder="" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa tu nombre!
+            </div>
+          </div>
+    
+          <div class="col-8 g-3 mt-2">
+            <label for="apellidosInput" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" name="PQR" id="apellidosInput" placeholder="" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa tus apellidos!
+            </div>
+          </div>
+    
+          <div class="col-8 mt-2">
+            <label for="tipoInput" class="form-label">Tipo de documento</label>
+            <select class="form-select" name="PQR" required id="tipoInput">
+              <option value="">...</option>
+              <option value="TI">Tarjeta de Identidad</option>
+              <option value="CC">Cedula de Ciudadania</option>
+              <option value="CE">Cedula de Estranjería</option>
+              <option value="PP">Pasaporte </option>
+              
+            </select>
+            <div class="invalid-feedback">¡Por favor, ingresa el tipo de documento!</div>
+          </div>
+    
+          <div class="col-8 mt-2">
+            <label for="documentoInput" class="form-label">Número de documento</label>
+            <input type="text" class="form-control" name="PQR" id="documentoInput" placeholder="Escribe tu número de documento" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa tu número de documento!
+            </div>
+          </div>
+    
+          <div class="col-8 mt-2">
+            <label for="telInput" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" name="PQR" id="telInput" placeholder="" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa tu número de teléfono!
+            </div>
+          </div>
+    
+          <div class="col-8 mt-2">
+            <label for="emailInput" class="form-label">Correo</label>
+            <input type="email" class="form-control" name="PQR" id="emailInput" placeholder="Escribe tu Correo electronico" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa tu correo!
+            </div>
+          </div>
+          
+        </div> <!--final formulario datos solicitante-->
+        
+        <div class="col-sm-6"> <!--inicio formulario informacion PQRS-->
+          
+            <legend>INFORMACIÓN PQRS</legend>
+    
+          <div class="col-4 mt-2">
+            <label for="asuntoInput" class="form-label">Asunto</label>
+            <input type="text" class="form-control" name="PQR" id="asuntoInput" placeholder="" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa el asunto del PQR!
+            </div>
+          </div>
+    
+          <div class="col-12 mt-2">
+            <label for="comentarioInput" class="form-label">Comentario</label>
+            <textarea class="form-control" name="PQR" id="comentarioInput" placeholder="Ingresa tu comentario"required></textarea>      
+              <div class="invalid-feedback">
+                ¡Por favor ingresa tu comentario!
+              </div>
+            </div>
+    
+          <div class="col-4 mt-2">
+            <label for="fechaInput" class="form-label">Fecha</label>
+            <input type="date" class="form-control" name="PQR" id="fechaInput" placeholder="" required>
+            <div class="invalid-feedback">
+              ¡Por favor, ingresa la fecha!
+            </div>
+          </div>
+        
+          <div class="col-12 mt-4">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+    
+    
+        </div> <!--final formulario informacion PQRS-->
+    
+        
+           
+        
+    
+       </form> <!--final formulario-->
+      </div> <!--final container-->
+    </div>  <!--final articler-->
+    
+         
+     
+    </article>
+{% endblock contenido %}
 
 
+    
 
-{% Endblock contenido %}
+    
