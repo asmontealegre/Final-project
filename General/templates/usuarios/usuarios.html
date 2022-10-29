@@ -1,34 +1,87 @@
 {% extends 'partials/bodyAdmin.html' %}
+{% load static %}
+
+
+
 
 {% block contenido %}
-<div class="container pt-5">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Nombres</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Tipo de Documento</th>
-        <th scope="col">Número de Documento</th>
-        <th scope="col">Télefono</th>
-        <th scope="col">Tipo Usuario</th>
-        <th scope="col">Estado</th>
-    </thead>
-    <tbody>
 
-        
-        {% for usuario in usuarios   %}
-        <tr>
-            <td>{{usuario.nombres}}</td>
-            <td>{{usuario.apellidos}}</td>
-            <td>{{usuario.tipoDocumento}}</td>
-            <td>{{usuario.numeroDocumento}}</td>
-            <td>{{usuario.telefono}}</td>
-            <td>{{usuario.tipoUsuario}}</td>
-            <td>{{usuario.estado}}</td>
-          </tr>
-        {% endfor %}
-        
-    </tbody>
-  </table></div>
+<div class="col-sm-12 col-md-6"><div class="dt-buttons btn-group flex-wrap"> <button class="btn btn-secondary buttons-excel buttons-html5" tabindex="0" aria-controls="example1" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Excel</font></font></span></button> <button class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="example1" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PDF</font></font></span></button> <button class="btn btn-secondary buttons-print" tabindex="0" aria-controls="example1" type="button"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Impresión</font></font></span></button> <div class="btn-group"><button class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="example1" type="button" aria-haspopup="true"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Visibilidad de columna</font></font></span><span class="dt-down-arrow"></span></button></div> </div></div>
+
+<div class="card">
+    <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+          
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Tipo de Documento</th>
+                    <th scope="col">Número de Documento</th>
+                    <th scope="col">Télefono</th>
+                    <th scope="col">Tipo Usuario</th>
+                    <th scope="col">Estado</th>
+                </thead>
+                <tbody>
+            
+                    
+                    {% for usuario in usuarios   %}
+                    <tr>
+                        <td>{{usuario.nombres}}</td>
+                        <td>{{usuario.apellidos}}</td>
+                        <td>{{usuario.tipoDocumento}}</td>
+                        <td>{{usuario.numeroDocumento}}</td>
+                        <td>{{usuario.telefono}}</td>
+                        <td>{{usuario.tipoUsuario}}</td>
+                        <td>{{usuario.estado}}</td>
+                      </tr>
+                    {% endfor %}
+                    
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="dataTables_info text-center" id="example1_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mostrando 1 a 3 de 10 entradas</font></font></div>
+    <div class="col-sm-12 col-md-7 "><div class="dataTables_paginate paging_simple_numbers " id="example1_paginate"><ul class="pagination justify-content: center;"><li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Anterior</font></font></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a></li><li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Siguiente</font></font></a></li></ul></div></div>
+
+</div>  
+</div>
+
 {% endblock contenido %}
-    
+
+{% block javascript %}
+<!-- DataTables  & Plugins -->
+<script src="{% static 'datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'jszip/jszip.min.js' %}"></script>
+<script src="{% static 'pdfmake/pdfmake.min.js' %}"></script>
+<script src="{% static 'pdfmake/vfs_fonts.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
+{% endblock javascript %}
+

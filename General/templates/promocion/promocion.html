@@ -1,41 +1,42 @@
-{% extends 'partials/body.html' %}
+{% extends "partials/body.html" %}
+{% load static %}
 
-{% block blockname %}
-<div class="row g-0 bg-light position-relative bg-body">
-    <div class="col-md-6 mb-md-0 p-md-4">
-      <img src="/HotelBosque/img/AMOR.png" class="w-100" alt="...">
-    </div>
-    
-    <div class="col ">
-          
-        <article class="card border-0 text-center justify-content-center h-100 " >
-        <h1 class="mt-0 "style="color:red">PAQUETE PARA LOS ENAMORADOS</h1>
-        <p><h5>VIVE LA MAGIA DE UNA NOCHE INOLVIDABLE EN PAREJA</h5></p>
-        <p><h5>Por solo <h3 style="color:red">50% DSCTO</h3></h5></p>
-        <h6>Promocion valida solo hasta el 5 de Septiembre </h6>
+{% block contenido %}
+
+  <div class="row g-0 bg-light position-relative bg-body pt-5">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="{% static 'img/AMOR.png' %}" class="w-100" alt="...">
+      </div>
+      
+      <div class="col ">
             
-                <a class="btn " href="#" role="button" style="color:red"><h3>Reserva Ahora</h3></a>
-      </article>
-      </div>
-  </div>
-  <br>
-  
-      <div class="row g-0 bg-light position-relative bg-body">
-        <div class="col-md-6 mb-md-0 p-md-4">
-          <img src="/HotelBosque/img/PLAN.jpg" class="w-100" alt="...">
+          <article class="card border-0 text-center justify-content-center h-100 " >
+          <h1 class="mt-0 "style="color:red">PAQUETE PARA LOS ENAMORADOS</h1>
+          <p><h5>VIVE LA MAGIA DE UNA NOCHE INOLVIDABLE EN PAREJA</h5></p>
+          <p><h5>Por solo <h3 style="color:red">50% DSCTO</h3></h5></p>
+          <h6>Promocion valida solo hasta el 5 de Septiembre </h6>
+              
+                  <a class="btn " href="#" role="button" style="color:red"><h3>Reserva Ahora</h3></a>
+        </article>
         </div>
-        
-        <div class="col ">
-          
-            <article class="card border-0 text-center justify-content-center h-100 " >
-            <h1 class="mt-0 "style="color:red">PAQUETE NOCHE ROMANTICA</h1>
-            <p><h5>VIVE LA MAGIA DE UNA NOCHE INOLVIDABLE EN PAREJA</h5></p>
-            <p><h5>Por solo <h3 style="color:red">$350.000</h3></h5></p>
-            <h6>Solo por tiempo limitado </h6>
-                
-                    <a class="btn " href="#" role="button" style="color:red"><h3>Reserva Ahora</h3></a>
-          </article>
+    </div>
+        <div class="row g-0 bg-light position-relative bg-body">
+          <div class="col-md-6 mb-md-0 p-md-4">
+            <img src="{% static 'img/PLAN.jpg' %}" class="w-100" alt="...">
           </div>
-      </div>
-{% endblock blockname %}
+          
+          <div class="col ">
+            
+              <article class="card border-0 text-center justify-content-center h-100 " >
+              <h1 class="mt-0 "style="color:red">PAQUETE NOCHE ROMANTICA</h1>
+              <p><h5>VIVE LA MAGIA DE UNA NOCHE INOLVIDABLE EN PAREJA</h5></p>
+              <p><h5>Por solo <h3 style="color:red">$350.000</h3></h5></p>
+              <h6>Solo por tiempo limitado </h6>
+                  
+                      <a class="btn " href="#" role="button" style="color:red"><h3>Reserva Ahora</h3></a>
+            </article>
+            </div>
+        </div>
+
+{% endblock contenido %}
     

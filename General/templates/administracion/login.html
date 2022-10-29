@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'css\sesion.css' %}">
-  <title>Sistema de Administracion</title>
+  <title>Inicio Sesión</title>
 </head>
 
 
@@ -28,10 +28,10 @@
 <body class="d-flex justify-content-center align-items-center vh-100  " style="background-color: #191970">
   <div class="bg-white p-2 rounded text-secondary" style="width: 21rem">
     <div class="d-flex justify-content-center">
-      <img src="/static/img/logo.png" alt="login-icon" style="height: 6rem" />
+      <img src="/static/img/logo.png" alt="login-icon" style="height: 8rem" />
     </div>
     <div class="text-center fs-1 fw-bold" style="color: #191970 ;">Iniciar Sesión</div>
-    <div class="input-group ">
+    <div class="input-group pt-2 ">
       <div class="input-group-text ;" style="background-color: #191970;">
 
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -107,7 +107,7 @@
     </a>
     <div class="d-flex justify-content-center ">
       <div>No tienes una cuenta?</div>
-      <a href="#" class="text-decoration-none text-info fw-semibold">Registrarse</a>
+      <a href="{% url 'registrar' %}" class="text-decoration-none text-info fw-semibold">Registrarse</a>
     </div>
     <div class="p-3">
       <div class=" text-center" style="height: 0.9rem">

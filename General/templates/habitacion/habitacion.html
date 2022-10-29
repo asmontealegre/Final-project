@@ -1,32 +1,32 @@
 {% extends 'partials/body.html' %}
 {% load static %}
 {% block contenido %}
-
-<div class="container text-center my-3 border-top border-3 pt-5">
+<div class="container-fluid pt-5">
     <p>
-      <H1 id="H1"> Sede La Estación</H1>
+      <H1 class="container text-center pt-5"> Sede La Estación</H1>
     </p>
-</div>
-<div class="container-fluid">
-  <div class="d-flex flex-wrap py-3  " s>
-    
-    {% for habitacion in habitaciones  %}
-      {% include 'habitacion/card-habitacion.html' %}
-    {% endfor %}
-  </div>
-</div>
-
-  <div class="container text-center my-3 border-top border-3 pt-5">
+        <div class="container text-center  border-top border-3 pt-5"></div>
+          <div class="container-fluid">
+            <div class="d-flex flex-wrap pb-5  " s>
+              
+              {% for habitacion in habitaciones  %}
+                {% include 'habitacion/card-habitacion.html' %}
+              {% endfor %}
+            </div>
+          </div>
+        
     <p>
-      <H1 id="H1"> Sede El Bosque</H1>
+      <H1 class="container text-center pt-3"> Sede El Bosque</H1>
     </p>
-</div>
-<div class="container-fluid">
-  <div class="d-flex flex-wrap py-3  " >
-    
-    {% for habitacion in habitaciones  %}
-      {% include 'habitacion/card-habitacion.html' %}
-    {% endfor %}
-  </div>
-</div>
+    <div class="container text-center border-top border-3 pt-5"></div>
+      <div class="container-fluid">
+        <div class="d-flex flex-wrap pb-5  " >
+          
+          {% for habitacion in habitaciones  %}
+            {% include 'habitacion/card-habitacion.html' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
 {% endblock contenido %}

@@ -10,14 +10,6 @@
       <div class="d-flex ">
         <div class="w-50"></div>
         <div class="col">
-          <div class="col" id="galeria">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor" class="bi bi-images"
-              viewBox="0 0 16 16">
-              <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-              <path
-                d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2zM14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1zM2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10z" />
-            </svg> Galeria
-          </div>
         </div>
         <div class="col" id="telefono">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="currentColor"
@@ -52,7 +44,7 @@
   <!-- Fin container redes sociales-->
 
   <!-- Inicio container Menú header-->
-  <nav id="barra" class="navbar navbar-expand-lg navbar-light ">
+  <nav id="barra"  class="navbar navbar-expand-lg navbar-light bg-light">  
     <div class="container-fluid d-inline-flex ">
       <img id="img-logo" src="{% static 'img\logo.png' %}" alt="logo" class="d-lg-inline-block align-text-top">
       <a class="navbar-brand active" id="navbar-brand" href="#">LA ESTACIÓN</a>
@@ -62,28 +54,29 @@
         <span class="navbar-toggler-icon"></span>
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="padding-left: 300px">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-            <li class="nav" style="font-size: 10pt; font-family:arial;">
+          <li class="nav-item" style="font-size: 10pt; font-family:arial;">
+            <a class="nav-link " style="color: white; padding-top: 15px;"
+              href="{% url 'inicio' %}">INICIO</a>
+          </li>
+          <li class="nav" style="font-size: 10pt; font-family:arial;">
+            <a class="nav-link " style="color: white; padding-top: 15px;"
+              href='{% url "habitacion" %}'>NUESTRAS SEDES</a>
+          </li>
+            <li class="nav-item" style="font-size: 10pt; font-family:arial;">
               <a class="nav-link " style="color: white; padding-top: 15px;"
                 href="/HotelBosque/reserva.html">RESERVAR</a>
             </li>
             <li class="nav" style="font-size: 10pt; font-family: arial;">
               <a class="nav-link " style="color: white; padding-top: 15px;"
-                href="/HotelBosque/servicios.html">SERVICIOS</a>
-            </li>
-            <li class="nav" style="font-size: 10pt; font-family:arial;">
-              <a class="nav-link " style="color: white; padding-top: 15px;"
-                href='{% url "habitacion" %}'>HABITACIONES</a>
+                href="{% url 'servicios' %}">SERVICIOS</a>
             </li>
             <li class="nav" style="font-size: 10pt; font-family: arial;">
               <a class="nav-link" style="color: white; padding-top: 15px;"
-                href="General\templates\promocion\promocion.html">PROMOCIONES</a>
+                href="{% url 'promocion' %}">OFERTAS</a>
             </li>
           </ul>
-
-        </div>
       </div>
     </div>
   </nav>

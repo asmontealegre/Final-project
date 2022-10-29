@@ -1,0 +1,58 @@
+#img-logo{
+    width: 9%;
+    height: 9%
+    }
+    #barra{
+        max-height: 80px;
+        background-image: linear-gradient(to top, white 0%, #e3e4e5 80%);
+        
+    }
+    
+    #barra-blue{
+        color: #191970;
+        background-color:#e3e4e5;
+    
+    }
+    #barra-blue{
+       text-align:center;
+       padding: auto;
+       
+    }
+    
+    #redes{
+        text-align: left;
+    
+    }
+    #idioma{
+        border-radius: 4px ;
+        text-decoration: none;
+        color: #191970;
+        font-size: 15px;
+        padding: 4px;
+    }
+    #idioma{
+        text-align: end;
+        display:block;
+    }
+    #telefono{
+        text-align: center;
+    }
+    #galeria{
+        text-align: right;
+    }
+    #container-fluid{
+        font-size: 30pt;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    #navbar-nav-scroll{
+        --bs-scroll-height: 100px;
+    }
+    #nav-link{
+        text-align: right; 
+        padding-right: 520px;
+        color: #191970;
+    }
+   .h1{
+    color: red;
+   }

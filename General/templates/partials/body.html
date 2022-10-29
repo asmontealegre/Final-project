@@ -9,20 +9,37 @@
 
 <!DOCTYPE html>
 <html lang="es ">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Hotel la Estación - {{titulo}}</title>
-</head>
-<body>
-    {% include "partials/header.html" %}
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
 
-    <div class=" pt-5">
-    {% block contenido %}
-    {% endblock contenido %}
-</div>
-    {% include "partials/footer.html" %}
-</body>
+        <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}">
+        <!-- Toastr -->
+        <link rel="stylesheet" href="{% static 'toastr/toastr.min.css' %}">
+        <link rel="shortcut icon" href="{% static 'img/SenaLogo.png' %}">
+        <title>Hotel la Estación - {{titulo}}</title>
+
+    </head>
+        <body>
+            {% include "partials/header.html" %}
+
+            <div class=" pt-5">
+            {% block contenido %}
+            
+            {% endblock contenido %}
+            </div>
+            
+            {% include "partials/footer.html" %}
+        </body>
 </html>

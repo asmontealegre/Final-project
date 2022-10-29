@@ -4,5 +4,6 @@ from promocion.views import promocion
 
 urlpatterns = [
     path('',promocion,name='promocion'),
+    
 ]
 

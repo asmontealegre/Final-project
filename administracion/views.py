@@ -8,6 +8,10 @@ def login(request):
     }
     return render(request,'administracion/login.html',context)
 
+def registrar(request):
+    context={   
+    }
+    return render(request,'administracion/registrar.html',context)
 
 def administracion(request):
     titulo="Tablero Principal"

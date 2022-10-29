@@ -1,15 +1,12 @@
 {% load static %}
-<div class="col my-3 ">
-    <div>
-        <h3 >Habitación {{habitacion.tipoHabitacion}}</h3></div>
+<div class="col">
+    <div><h3 style="text-align:center;">Habitación {{habitacion.tipoHabitacion}}</h3></div>
     
     <div class="card border-0 shadow-lg" style="width: 25rem;">
         <img src="{% static 'img\sencilla.1.jpg' %}"  class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-text"  id="card-text">{{habitacion.tipoHabitacion.descripcionTipoHabitacion}}</p>
         </div>
-          <li class="list-group-item border-0 shadow-lg text-center" ><a href="#" >Reservar</a></li>
-        
-        
-      </div>
+        <li class="list-group-item border-0 shadow-lg text-center" ><a href="#" >Reservar</a></li>    
+    </div>
 </div>
