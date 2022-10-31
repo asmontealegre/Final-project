@@ -1,0 +1,136 @@
+#img-logo{
+    width: 9%;
+    height: 9%
+    }
+    #barra{
+        max-height: 80px;
+        background-image: linear-gradient(to top, white 0%, #e3e4e5 80%);
+        
+    }
+    
+    #barra-blue{
+        color: #191970;
+        background-color:#e3e4e5;
+    
+    }
+    #barra-blue{
+       text-align:center;
+       padding: auto;
+       
+    }
+    
+    #redes{
+        text-align: left;
+    
+    }
+    #idioma{
+        border-radius: 4px ;
+        text-decoration: none;
+        color: #191970;
+        font-size: 15px;
+        padding: 4px;
+    }
+    #idioma{
+        text-align: end;
+        display:block;
+    }
+    #telefono{
+        text-align: center;
+    }
+    #galeria{
+        text-align: right;
+    }
+    #container-fluid{
+        font-size: 30pt;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    #navbar-nav-scroll{
+        --bs-scroll-height: 100px;
+    }
+    #nav-link{
+        text-align: right; 
+        padding-right: 520px;
+        color: #191970;
+    }
+    
+
+
+    #menu{
+        font-size: 18px;
+        
+    }
+    #navbar-brand{
+        font-size: 35px;
+        color: #191970;
+        font-family: montserrat;
+    }
+    #row{
+        margin: auto;
+        border-radius: 20px;
+    }
+
+    #col{
+        background-color: #191970;
+        border-radius: 34px;
+    }
+    #book{
+        color:#191970;
+        
+    }
+    #text{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+    }
+    
+    #form{
+        background-color: #e3e4e5;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        border-radius: 1%;
+        
+    }
+    .section{
+        padding: 30%;
+    }
+
+    #grid-block{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+ #footer{
+        background-image: linear-gradient(to top, #e3e4e5  0%, white 80%);
+    color: #191970;
+    }
+    
+#container{
+    color: #191970;
+
+}
+#g-3{
+    font-size: 15px;
+}
+#align-content{
+    text-align: left;
+    
+}
+#order-5{
+    text-align: right;
+}
+h3{
+    color: #191970;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 26px;
+        text-align: center;
+}
+h1{
+    color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+         
+}
+#h5{
+    color: #191970;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

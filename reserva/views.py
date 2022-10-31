@@ -30,3 +30,8 @@ def crear_reserva(request):
         'form': form
     }
     return render(request,'reserva/crear-reserva.html',context)
+
+def reservas(request):
+    context={ 
+    }
+    return render(request,'reserva/reserva.html',context)

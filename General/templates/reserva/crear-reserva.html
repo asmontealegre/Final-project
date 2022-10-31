@@ -2,11 +2,12 @@
 {% load crispy_forms_tags %}
 
 {% block contenido %}
-<div class="container mx-lg-5 w-50">
-    <form action="" method="POST">
+<div class="container  w-50 ">
+    
+    <form action="" method="POST ">
         {{form|crispy}}
         {% csrf_token %}
-        <input class="btn btn-success" type="submit" value="Registrar">
+        <input class="btn btn-primary" type="submit" value="Registrar">
     </form>
 </div>
 {% endblock contenido %}

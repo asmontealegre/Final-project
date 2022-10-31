@@ -1,7 +1,8 @@
 from django.urls import path
 
-from habitacion.views import habitacion 
+from habitacion.views import  habitaciones, sedes 
 
 urlpatterns = [
-    path('',habitacion,name='habitacion'),
+    path('',sedes,name='sedes'),
+    path('habitaciones/', habitaciones,name="habitaciones"),
 ]

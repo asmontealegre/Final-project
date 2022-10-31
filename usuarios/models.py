@@ -32,7 +32,7 @@ class Usuario(models.Model):
         TI='T.I', _('Tarjeta de Identidad')
         OT='Otro', _('Otro Tipo de Documento')
     tipoDocumento=models.CharField(max_length=5, choices=TipoDocumento.choices, default=TipoDocumento.CC, verbose_name="Tipo de Documento")
-    numeroDocumento=models.CharField(max_length=45, verbose_name="Número de Documento")
+    numeroDocumento=models.CharField(max_length=45, unique=True, verbose_name="Número de Documento")
     telefono=models.CharField(max_length=15, verbose_name="Teléfono", blank=True)
     
     class tipoUsuario(models.TextChoices):

@@ -1,10 +1,9 @@
 {% load static %}
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #191970">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
-    <i class="fa-thin fa-hotel" class="brand-image img-circle elevation-3"
-      style="opacity: .8"></i>
+    <img src="{% static '\img\logo.png' %}" alt="login-icon" style="height: 3rem" style="opacity: .8"></i>
     <span class="brand-text font-weight-light">Hotel La Estacion</span>
   </a>
 
@@ -13,10 +12,10 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img src="#{% static 'img/woman.png' %}" class="img-circle elevation-2" alt="User Image">
+        <i class="nav-icon mt-2 fas fa-user " style="color:white"></i>
       </div>
       <div class="info">
-        <a href="#" class="d-block">Angelica Sofia</a>
+        <a href="#" class="d-block " style="">Angelica Sofia</a>
       </div>
     </div>
 
@@ -53,38 +52,29 @@
           </li>
           <li class="nav-item">
             <a href="{% url 'reserva' %}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>Usuarios Registrados</p>
+              <i class="nav-icon fas fa-bell"></i>
+              <p>Reservas Registrados</p>
             </a>
           </li>
         </li> 
         <li class="nav-header">Recepcion</li>
         <li class="nav-item">
-          <a href=# class="nav-link">
+          <a href= "{% url 'habitaciones' %}" class="nav-link">
             <i class="nav-icon fas fa-bed"></i>
             <p>
               Habitaciones
             </p>
           </a>
         </li>
-        <li class="nav-header">PQRS</li>
-        <li class="nav-item">
-          <a href=# class="nav-link">
-            <i class="nav-icon fas fa-address-book"></i>
-            <p>
-              PQRS Registradas
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
-                <p>Responder PQRS</p>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-header">Salir</li>
+        <li class="nav-header">PQRS</li>   
+          <li class="nav-item">
+            <a href="{% url 'pqrs' %}" class="nav-link">
+              <i class="nav-icon fas fa-calendar days"></i>
+              <p>PQRS Registrada</p>
+            </a>
+          </li>
+          
+        </li> 
         <li class="nav-item">
           <a href="pages/mailbox/compose.html" class="nav-link">
             <i class="nav-icon fas fa-power-off"></i>

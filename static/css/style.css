@@ -4,13 +4,17 @@
     }
     #barra{
         max-height: 80px;
-        background-image: linear-gradient(to top, #020a3a 0%, #191970 80%);
+        background:  #191970;
         
     }
+    #navbarSupportedContent{
+        background:  #191970;
+    }
+    
     
     #barra-blue{
-        color: white;
-        background-color:hsl(240, 64%, 27%)
+        color:white;
+        background:  #191970;
     
     }
     #barra-blue{
@@ -37,7 +41,7 @@
         display:block;
     }
     #telefono{
-        text-align: center;
+        text-align: right;
     }
     #galeria{
         text-align: end;

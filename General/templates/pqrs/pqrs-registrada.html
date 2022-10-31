@@ -1,34 +1,13 @@
-{% extends 'partials/bodyAdmin.html' %}
+{% extends 'partials/body.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% block contenido %}
-<div class="container">
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Nombres</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Télefono</th>
-        <th scope="col">Correo Electronico</th>
-        <th scope="col">Asunto</th>
-        <th scope="col">Comentario del Cliente</th>
-        <th scope="col">Fecha</th>
-    </thead>
-    <tbody>
-
-        
-        {% for pqrs in pqrs  %}
-        <tr>
-            <td>{{pqrs.nombres}}</td>
-            <td>{{pqrs.apellidos}}</td>
-            <td>{{pqrs.telefono}}</td>
-            <td>{{pqrs.email}}</td>
-            <td>{{pqrs.asunto}}</td>
-            <td>{{pqrs.comentarioCliente}}</td>
-            <td>{{pqrs.fechaCreacion}}</td>
-          </tr>
-        {% endfor %}
-        
-    </tbody>
-  </table></div>
+<div class="container  w-50 PT-5">
+    <form action="" method="POST">
+        {{form|crispy}}
+        {% csrf_token %}
+    <input  class="btn btn-primary" type="submit" value="Registrar" >
+    </form>
+</div>
 {% endblock contenido %}
-    
