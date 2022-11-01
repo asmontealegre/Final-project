@@ -1,32 +1,132 @@
 {% extends 'partials/body.html' %}
 {% load static %}
 {% block contenido %}
-<div class="container-fluid pt-5">
-    <p>
-      <H1 class="container text-center pt-5"> Sede La Estación</H1>
-    </p>
-        <div class="container text-center  border-top border-3 pt-5"></div>
-          <div class="container-fluid">
-            <div class="d-flex flex-wrap pb-5  " s>
-              
-              {% for habitacion in habitaciones  %}
-                {% include 'habitacion/card-habitacion.html' %}
-              {% endfor %}
+
+      <main>
+
+        <section class="pt-5 pb-2 text-center container">
+          <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nuestras Sedes</font></font></h1>
+              <p class="lead text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> El Hotel la Gran Estación, brinda a sus Clientes diferentes sedes para una mayor comodidad.</font></font></p>
             </div>
           </div>
+        </section>
         
-    <p>
-      <H1 class="container text-center pt-3"> Sede El Bosque</H1>
-    </p>
-    <div class="container text-center border-top border-3 pt-5"></div>
-      <div class="container-fluid">
-        <div class="d-flex flex-wrap pb-5  " >
+        <div class="album py-5 bg-light">
+
+          <div class="container">
+      <h1 class="text-center pb-3">Sede La Estación</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button " class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"> <a href=""></a> <font style="vertical-align: inherit;">Ver detalles</font></font></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></button>
+                      </div>
+                      <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutos</font></font></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+      
+                  <div class="card-body">
+                    <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></button>
+                      </div>
+                      <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutos</font></font></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        
           
-          {% for habitacion in habitaciones  %}
-            {% include 'habitacion/card-habitacion.html' %}
-          {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
-
+      <div class="album pt-1 bg-light">
+        <h1 class="text-center pb-5">Sede El Bosque</h1>
+          <div class="container">
+            
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutos</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutos</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            
+                        <div class="card-body">
+                          <p class="card-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Esta es una tarjeta más amplia con texto de respaldo a continuación como complemento natural de contenido adicional. Este contenido es un poco más largo.</font></font></p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver</font></font></button>
+                              <button type="button" class="btn btn-sm btn-outline-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Editar</font></font></button>
+                            </div>
+                            <small class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9 minutos</font></font></small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+        
+            </div>
+          </div>
+        </div>
+      </main>
 {% endblock contenido %}
