@@ -1,9 +1,6 @@
 {% extends 'partials/bodyAdmin.html' %}
 {% load static %}
 
-
-
-
 {% block contenido %}
 
 <div class="container">
@@ -40,7 +37,7 @@
                             <td>{{usuario.tipoUsuario}}</td>
                             <td class="text-center">{{usuario.estado}}</td>
                             <td ><a class="btn btn " href="{% url 'usuarios-editar' usuario.id %}"><i class="fas fa-edit"></i>
-                                <a class="btn btn-" href="{% url 'usuarios-eliminar' usuario.id %}"><i class="fas  fa-trash-alt"></i></td>
+                            <a class="btn btn" href="{% url 'usuarios-eliminar' usuario.id %}"><i class="fas  fa-trash-alt"></i></td>
                             
                             {% endif %}
                         </tr>
@@ -75,7 +72,7 @@
     $(function () {
         $("#example1").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            "buttons": [ "excel", "pdf", "print"]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
             "paging": true,

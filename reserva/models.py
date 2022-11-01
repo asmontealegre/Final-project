@@ -3,7 +3,6 @@ from django.core.validators import MinValueValidator
 from habitacion.models import Habitacion
 from promocion.models import Promocion
 from django.utils.translation import gettext_lazy as _
-from usuarios.models import Usuario
 
 # Create your models here.
 

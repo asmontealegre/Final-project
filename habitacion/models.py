@@ -9,7 +9,7 @@ from django.core.validators import MinValueValidator
 # Tipo Habitacion.
 class TipoHabitacion(models.Model):
     class NombreTipoHabitacion(models.TextChoices):
-        Sencilla='Sencilla', ('Sencilla')
+        Sencilla='Sencilla ', ('Sencilla')
         Doble='Doble', ('Doble')
         Campestre='Campestre', ('Campestre')
     nombreTipoHabitacion=models.CharField(max_length=10, choices=NombreTipoHabitacion.choices, default=NombreTipoHabitacion.Sencilla, verbose_name="Nombre Tipo de Habitacion")

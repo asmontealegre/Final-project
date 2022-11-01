@@ -1,0 +1,16 @@
+{% load static %}
+<div class="col-md-6 mb-md-0 p-md-4">
+    <img src="{% static 'img/AMOR.png' %}" class="w-100" alt="...">
+  </div>
+  
+  <div class="col ">
+        
+      <article class="card border-0 text-center justify-content-center h-100 " >
+      <h1 class="mt-0 "style="color:red"> {{Promociom.nombrePromocion}}</h1>
+      <p><h5> {{Promociom.descripcionPromocion}}</h5></p>
+      <p><h5>Por solo <h3 style="color:red">{{Promociom.valor}}</h3></h5></p>
+          
+              <a class="btn " href="#" role="button" style="color:red"><h3>Reserva Ahora</h3></a>
+    </article>
+    </div>
+</div>

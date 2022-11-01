@@ -1,60 +1,53 @@
 {% extends 'partials/bodyAdmin.html' %}
+
 {% load static %}
 {% block contenido %}
-
-
-
 <div class="container">
-  <div class="card">
-      <div class="card-body">
-          <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+    <div class="card">
+        <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
 
-          
-              <table id="tabla-general" class="table">
-                 
-                  <thead>
+            <table id="tabla-general" class="table">
+                
+                <thead>
                     <tr>
-                      <th scope="col">Nombres</th>
-                      <th scope="col">Apellidos</th>
-                      <th scope="col">Cédula de ciudadanía</th>
-                      <th scope="col">Teléfono</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Cant Hab</th>
-                      <th scope="col">Número Hab</th>
-                      <th scope="col">Check-In</th>
-                      <th scope="col">Check-Out</th>
-                      <th scope="col">Metodo de Pago</th>
-                      <th scope="col">Precio</th>
-                      
-
-                      
-                  </thead>
-                  <tbody>
-
-                      
-                      {% for reserva in reserva  %}
-                      <tr>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Cédula de ciudadanía</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Cant Hab</th>
+                    <th scope="col">Número Hab</th>
+                    <th scope="col">Check-In</th>
+                    <th scope="col">Check-Out</th>
+                    <th scope="col">Metodo de Pago</th>
+                    <th scope="col">Precio</th>
+                </thead>
+                <tbody>
+                    
+                    {% for reserva in reserva  %}
+                    <tr>
+                    
                         <td>{{reserva.nombres}}</td>
                         <td>{{reserva.apellidos}}</td>
                         <td>{{reserva.numeroDocumento}}</td>
                         <td>{{reserva.telefono}}</td>
                         <td>{{reserva.correo}}</td>
-                          <td>{{reserva.cantidadHabitaciones}}</td>
-                          <td>{{reserva.numeroHuespedes}}</td>
-                          <td>{{reserva.fechaIngreso}}</td>
-                          <td>{{reserva.fechaSalida}}</td>
-                          <td>{{reserva.metodoPago}}</td>
-                          <td>{{reserva.valorReserva}}</td>
-                        </tr>
-                      {% endfor %}
-                      
-                  </tbody>
-              </table>
-          </div>
-      </div>
-      
-  
-  </div> 
+                        <td>{{reserva.cantidadHabitaciones}}</td>
+                        <td>{{reserva.numeroHuespedes}}</td>
+                        <td>{{reserva.fechaIngreso}}</td>
+                        <td>{{reserva.fechaSalida}}</td>
+                        <td>{{reserva.metodoPago}}</td>
+                        <td>{{reserva.valorReserva}}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div> 
 </div>
 
 {% endblock contenido %}
@@ -74,14 +67,12 @@
 <script src="{% static 'datatables-buttons/js/buttons.html5.min.js' %}"></script>
 <script src="{% static 'datatables-buttons/js/buttons.print.min.js' %}"></script>
 <script src="{% static 'datatables-buttons/js/buttons.colVis.min.js' %}"></script>
-
-
 <!-- Page specific script -->
 <script>
     $(function () {
         $("#example1").DataTable({
             "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            "buttons": [ "excel", "pdf", "print", ]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         $('#example2').DataTable({
             "paging": true,
@@ -95,3 +86,4 @@
     });
 </script>
 {% endblock javascript %}
+
