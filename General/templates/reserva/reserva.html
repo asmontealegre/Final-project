@@ -3,46 +3,386 @@
 {% load static %}
 {% block contenido %}
 
- 
+
 <section>
-<div class="carousel-inner ">
-  <div class="carousel-item active ">
-    <img src="{% static 'img/azul.jpg' %}" class="d-block w-100" alt="...">
-    <div class="carousel-caption d-none d-md-block">
-      <h1 id="h1">HABITACIÓN SENCILLA </h1>
-      <p><h4> Una habitación diseñada para otorgar a sus residentes comodidad y confort.</h4></p>
+  <div class="carousel-inner ">
+    <div class="carousel-item active ">
+      <img src="{% static 'img/azul.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 id="h1">HABITACIÓN SENCILLA </h1>
+        <p><h4> Una habitación diseñada para otorgar a sus residentes comodidad
+            y confort.</h4></p>
+      </div>
+    </section>
+    <div class="container px-4 py-4" id="icon-grid">
+      <h2 class="pb-2 border-bottom">Icon grid</h2>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4
+        py-5">
+
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em"
+            height="1.75em"><use xlink:href="#speedometer2"></use></svg>
+          <div>
+            <h4 class="fw-bold mb-0">Featured title</h4>
+            <p>Paragraph of text beneath the heading to explain the heading.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em"
+            height="1.75em"><use xlink:href="#toggles2"></use></svg>
+          <div>
+            <h4 class="fw-bold mb-0">Featured title</h4>
+            <p>Paragraph of text beneath the heading to explain the heading.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em"
+            height="1.75em"><use xlink:href="#geo-fill"></use></svg>
+          <div>
+            <h4 class="fw-bold mb-0">Featured title</h4>
+            <p>Paragraph of text beneath the heading to explain the heading.</p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em"
+            height="1.75em"><use xlink:href="#tools"></use></svg>
+          <div>
+            <h4 class="fw-bold mb-0">Featured title</h4>
+            <p>Paragraph of text beneath the heading to explain the heading.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<div class="album py-5 bg-light">
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
-      
+
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center ">
+      <button type="button1" id="button1" class="btn btn-outline-light w-25"
+        style="color:white;" data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Ventilador</a>
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1"
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Datos de Reserva</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center ">
+              <div class="col-md-10 col-lg-11">
+
+                <form class="needs-validation" novalidate="">
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="firstName"
+                        placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Apellidos</label>
+                      <input type="text" class="form-control" id="lastName"
+                        placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="username" class="form-label">Cédula de
+                        Ciudadanía</label>
+                      <div class="input-group has-validation">
+
+                        <input type="text" class="form-control" id="username"
+                          placeholder="" required="">
+                        <div class="invalid-feedback">
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="username" class="form-label">Teléfono</label>
+                      <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="username"
+                          placeholder="" required="">
+                        <div class="invalid-feedback">
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email <span
+                          class="text-muted">(Optional)</span></label>
+                      <input type="email" class="form-control" id="email"
+                        placeholder="usuario@ejemplo.com">
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="address" class="form-label">Cant Habitaciones</label>
+                      <input type="number" class="form-control" id="number"
+                        placeholder="" required="">
+                      <div class="invalid-feedback">
+                        Please enter your shipping address.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="Medio de Pago" class="form-label">Complemento</label>
+                      <select class="form-select" id="Medio de Pago"
+                        required="">
+                        <option value="">Ventilador</option>
+                      </select>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="address2" class="form-label">Check-In<span
+                          class="text-muted"></span></label>
+                      <input type="date" class="form-control" id="date"
+                        placeholder="">
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="address2" class="form-label">Check-Out<span
+                          class="text-muted"></span></label>
+                      <input type="date" class="form-control" id="date"
+                        placeholder="">
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="Valor" class="form-label">Valor</label>
+                      <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="valor"
+                          placeholder="" required="">
+                        <div class="invalid-feedback">
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="Medio de Pago" class="form-label">Medio de
+                        Pago</label>
+                      <select class="form-select" id="Medio de Pago"
+                        required="">
+                        <option value="">...</option>
+                        <option>Efecty</option>
+                        <option>Bancolombia</option>
+                      </select>
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4">
+
+                  <button class="w-100 btn btn-lg" style="background:#191970;
+                    color:white;" type="submit">Reservar</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    </div>
 
-          
+
+    <button type="button1" id="button1" class="btn btn-outline-light w-25"
+      style="color:white;" data-bs-toggle="modal"
+      data-bs-target="#exampleModal1"
+      data-bs-whatever="@mdo">Aire Acondicionado</a>
+  </button>
+  <div class="modal fade" id="exampleModal1" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Datos de Reserva</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center ">
+            <div class="col-md-10 col-lg-11">
+
+              <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="firstName"
+                      placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="lastName"
+                      placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="username" class="form-label">Cédula de
+                      Ciudadanía</label>
+                    <div class="input-group has-validation">
+
+                      <input type="text" class="form-control" id="username"
+                        placeholder="" required="">
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="username" class="form-label">Teléfono</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="username"
+                        placeholder="" required="">
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span
+                        class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email"
+                      placeholder="usuario@ejemplo.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email address for shipping updates.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="address" class="form-label">Cant Habitaciones</label>
+                    <input type="number" class="form-control" id="number"
+                      placeholder="" required="">
+                    <div class="invalid-feedback">
+                      Please enter your shipping address.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="Medio de Pago" class="form-label">Complemento</label>
+                    <select class="form-select" id="Medio de Pago" required="">
+                      <option value="">Aire Acondicionado</option>
+                    </select>
+
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="address2" class="form-label">Check-In<span
+                        class="text-muted"></span></label>
+                    <input type="date" class="form-control" id="date"
+                      placeholder="">
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="address2" class="form-label">Check-Out<span
+                        class="text-muted"></span></label>
+                    <input type="date" class="form-control" id="date"
+                      placeholder="">
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="Valor" class="form-label">Valor</label>
+                    <div class="input-group has-validation">
+                      <input type="text" class="form-control" id="valor"
+                        placeholder="" required="">
+                      <div class="invalid-feedback">
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="Medio de Pago" class="form-label">Medio de Pago</label>
+                    <select class="form-select" id="Medio de Pago" required="">
+                      <option value="">...</option>
+                      <option>Efecty</option>
+                      <option>Bancolombia</option>
+                    </select>
+                    <div class="invalid-feedback">
+
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-lg" style="background:#191970;
+                  color:white;" type="submit">Reservar</button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marcador de posición: Miniatura" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-          
-        </div>
-      </div>
-
-
-  
+    </div>
   </div>
 </div>
+
+
+
+<div class="container px-4 pt-2 pb-4" id="custom-cards">
+  <h2 class="pb-2 border-bottom"></h2>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-dark
+        rounded-5 shadow-lg" style="background-image:
+        url('unsplash-photo-1.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long
+            jacket</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-dark
+        rounded-5 shadow-lg" style="background-image:
+        url('unsplash-photo-2.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title
+            that wraps to multiple lines</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-dark
+        rounded-5 shadow-lg" style="background-image:
+        url('unsplash-photo-3.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title
+            belongs here</h2>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
 
 {% endblock contenido %}

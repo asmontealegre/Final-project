@@ -1,11 +1,13 @@
 #img-logo{
     width: 9%;
     height: 9%
+    
     }
     #barra{
         max-height: 80px;
         background:  #191970;
-        
+       
+       
     }
     #navbarSupportedContent{
         background:  #191970;
@@ -15,13 +17,12 @@
     #barra-blue{
         color:white;
         background:  #191970;
-    
+       
     }
     #barra-blue{
        text-align:center;
        padding: auto;
-       
-       
+      
     }
     
     #redes{
@@ -43,9 +44,7 @@
     #telefono{
         text-align: right;
     }
-    #galeria{
-        text-align: end;
-    }
+    
     #container-fluid{
         font-size: 30pt;
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -89,7 +88,7 @@
     #navbar-brand{
         font-size: 35px;
         color: white;
-        font-family: montserrat;
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     }
     #footer{
         background-image: linear-gradient(to top, #191970  0%,  #020a3a 80%);

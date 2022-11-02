@@ -5,10 +5,21 @@
 {% block contenido %}
     <section class="pt-5">
         
-        <div class="container text-center pt-5"style="font-family:var(--bs-font-sans-serif)" >
-            <h1 id="h1">DISFRUTA DE NUESTROS ESPECTACULARES <br> SERVICIOS <br><h4>HOBO-HUILA</h4></h1>
-        </div>
-
+        <div class="row py-lg-5 text-center ">
+            <div class="col-lg-6 col-md-8 mx-auto">
+              <h1 class="fw-light">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">Nuestras Sedes</font>
+                </font>
+              </h1>
+              <p class="lead text-muted">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;"> El Hotel la Gran Estación, brinda a sus Clientes diferentes sedes
+                    para una mayor comodidad.</font>
+                </font>
+              </p>
+            </div>
+          </div>
         <article class="card ">
             <div class="container-flex">
                 <div class="row g-0 bg-light position-relative bg-body">
@@ -17,7 +28,7 @@
                     </div>
                     <div class="col-md-6 p-0 ">
 
-                        <div class="container">
+                        <div class="container p-0">
                             <div class="row">
                     
                                 <div class="col-6 col p-0"><img src="{% static 'img/campestre1.jpg' %}" class="w-100 h-100" alt="..."></div>
@@ -32,103 +43,160 @@
                 </div>
             </div>
         </article>
-
-
-        <div class="container-flex">
-            <div class="row">
-                <div class="col-sm-4">
-                    <article class="card border-0  justify-content-center h-100 ">
-                        <p style="text-align: left;"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum pariatur molestias perferendis repudiandae, incidunt voluptatum quis unde distinctio quas cupiditate necessitatibus architecto ducimus id inventore quos laudantium error optio. Odio.</p>
-                    </article>
+ 
+    
+            <div class="container-fluid marke">
+          
+              <!-- START THE FEATURETTES -->
+ 
+          
+              <div class="row featurette">
+                <div class="col-md-5">
+                  <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+                  <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
                 </div>
-                <div class="col pt-4">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner h-100">
-                                <div class="carousel-item active">
-                                    <img src="{% static '/img/jacuzzi-banera-hidromasaje (2).jpg' %}" class="w-100 h-100" alt="...">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="{% static 'img/futbol.jpg' %}" class="w-100 h-100" alt="...">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="{% static 'img/playa (1).jpg' %}" class="w-100 h-100" alt="...">
-                                </div>
+                <div class="col-md-7">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active">
+                                <img src="{% static '/img/jacuzzi-banera-hidromasaje (2).jpg' %}" class="w-100 h-100" alt="...">
                             </div>
-                        
-
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/futbol.jpg' %}" class="w-100 h-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/playa (1).jpg' %}" class="w-100 h-100" alt="...">
+                            </div>
                         </div>
-                </div>
-            </div>
-        </div>
+                    
 
-        <div class="container-flex">
-            <div class="row g-0 bg-light position-relative bg-body">
-                <div class="col-md-8 mb-md-0 p-md-4">
-                <img src="{% static 'img/billar.jpg' %}" class="w-100" alt="...">
-                </div>
-                    <div class="col-md-4 p-4 ps-md-0 text-center">
-                    <article class="card border-0 justify-content-center h-100">
-                        <h3 class="mt-0 "> Columns with stretched link</h3>
-                            <p  style="text-align: left;">Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
-                    </article>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-            </div>
-        </div>
+                </div>
+              </div>
 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col pt-2 h-100 ">
-                    <article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
+              <!-- Three columns of text below the carousel -->
+              <div class="container pb-5" id="featured-3">
+                <hr class="featurette-divider ">
+                <div class="row g-4  row-cols-1 row-cols-lg-3">
+                  <div class="col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"></use></svg>
+                    </div>
+                    <h3 class="fs-2">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                      Call to action
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                  </div>
+                  <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"></use></svg>
+                    </div>
+                    <h3 class="fs-2">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                      Call to action
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                  </div>
+                  <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                    </div>
+                    <h3 class="fs-2">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                      Call to action
+                      <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+          
+              <div class="row featurette pt-4">
+                <div class="col-md-5 order-md-2">
+                  <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+                  <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active">
+                                <img src="{% static '/img/jacuzzi-banera-hidromasaje (2).jpg' %}" class="w-100 h-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/futbol.jpg' %}" class="w-100 h-100" alt="...">
+                            </div>
+                            <div class="carousel-item h-100">
+                                <img src="{% static 'img/playa (1).jpg' %}" class="w-100 h-100" alt="...">
+                            </div>
+                        </div>
+                    
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+              </div>
+           
+          
+            
+            <div class="container pt-1">
+                <hr class="featurette-divider ">
+                <div class="row mb-3 text-center ">
+                    <div class="col-6 col-sm-4 themed-grid-col"><article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
                         <h2 style="text-align: center;">hola</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium cum praesentium eius rerum voluptatem doloremque cupiditate odit voluptatibus, blanditiis dicta at magnam voluptatum quod voluptate vero, fugiat, hic quaerat reiciendis.</p>
+                        <p>Lorem ipsum dolor, entium eius rerum voluptatem doloremque cupiditate odit voluptatibus, blanditiis dicta at magnam voluptatum quod voluptate vero, fugiat, hic quaerat reiciendis.</p>
                     </article>
                 </div>
-                <div class="col pt-2 h-100">
-                    <article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
+                    <div class="col-6 col-sm-4 themed-grid-col"><article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
                         <h2 style="text-align: center;">text</h2>
                         <p>Lorem ipsum dolor sit amet, sit . consectetur adipisicing elit. Saepe sed eos quisquam perferendis perspiciatis libero beatae ea, quidem ratione molestiae nobis delectus reiciendis modi numquam! Dolorum modi unde deleniti ipsa!</p>
-                    </article>
-                </div>
-                <div class="col pt-2 h-100">
-                    <article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
+                    </article></div>
+                    <div class="col-6 col-sm-4 themed-grid-col"><article class="card border-0  shadow-lg p-3 mb-5 bg-body rounded">
                         <h2 style="text-align: center;">lorem</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis commodi, veritatis perferendis laboriosam dolore rerum earum adipisci possimus eaque obcaecati asperiores similique cupiditate. Voluptates, alias ex ipsa ea voluptas illo.</p>
-                    </article>
+                        <p>Lorem ipsum dolor. Officiis commodi, veritatis perferendis laboriosam dolore rerum earum adipisci possimus eaque obcaecati asperiores similique cupiditate. Voluptates, alias ex ipsa ea voluptas illo.</p>
+                    </article></div>
+                  </div>
                 </div>
-            </div>
-        </div>
-
+                
+            
+              <div class="row featurette py-4 pb-5">
+                <div class="col-md-5">
+                  <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                  <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                </div>
+                <div class="col-md-7">
+                  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img" width="150" height="150"  ><img src="{% static 'img/mesa.jpeg' %}" class="h-100 w-75" alt="..."></svg>
+                  
+                </div>
+              </div>
+          
+             
+          
+              <!-- /END THE FEATURETTES -->
+          
+            </div><!-- /.container -->
+          
         
-            <div class="container-flex">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <article class="card border-0 text-center justify-content-center h-100">
-                            <p  style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum pariatur molestias perferendis repudiandae, incidunt voluptatum quis unde distinctio quas
-                            cupiditate necessitatibus architecto ducimus id inventore quos laudantium error optio. Odio.</p>
-                            <a href="#" class="stretched-link">Go somewhere</a> 
-                        </article>
-                    </div>
-                        <div class="col pb-4">
-                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="{% static 'img/mesa.jpeg' %}" class="w-100" alt="...">
-                                    </div>
-                        
-                                    <span class="visually-hidden">Next</span>
-                                </div>
-                            </div>  
-                        </div>
-                </div>
-            </div>
+        
+           
         
     </section>
 {% endblock contenido %}
