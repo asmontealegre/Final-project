@@ -3,10 +3,6 @@ from reserva.forms import ReservaForms
 from reserva.models import Reserva
 
 # Create your views here.
-def reservas(request):
-    context={ 
-    }
-    return render(request,'reserva/reserva.html',context)
 
 
 def reserva(request):
