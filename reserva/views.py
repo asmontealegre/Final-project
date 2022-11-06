@@ -3,6 +3,10 @@ from reserva.forms import ReservaForms
 from reserva.models import Reserva
 
 # Create your views here.
+def reservas_formulario(request):
+    context={ 
+    }
+    return render(request,'reserva/reservar-formulario.html',context)
 
 
 def reserva(request):
