@@ -61,33 +61,42 @@
             </div>
             <div class="col-md-6">
               <div class="card-body text-center ">
-                <h2 class="card-title pt-5">HOTEL LA ESTACIÓN</h2>
+                <h2 class="card-title pt-5 " >HOTEL LA GRAN ESTACIÓN</h2>
                 <p class="card-text pt-5"id="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae unde incidunt sapiente tempore ipsa tempora totam repellendus at illo, minus asperiores quam facilis! Voluptate laudantium officia doloribus porro, eaque sequi!</p>
-                <p class="card-text pt-5"><li class="text-center">Justo Olarte</li></p>
-                
-                <button type="button" class="btn btn-secondary ">CONOCE MÁS</button>
+                  La formula perfecta para disfrutar de una estadia ideal, la encuentras en los servicios e instalaciones del hotel La Gran Estación. Reservando en nuestro hotel, hallaras comodidad, calidez, calidad y tendras siempre a su disposición el restaurante, area recreacional, gimnasio y más.</p>
+                <p class="card-text pt-5">Justo Olarte - Gerente</p>
               </div>
             </div>
           </div>
         </div>
   <!--card-->
-
+<div class="container">
   <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
     <div class="d-flex flex-column align-items-start gap-2">
-      <h3 class="fw-bold">Left-aligned title explaining these awesome features</h3>
-      <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+      <h3 class="fw-bold">Cuando vuelvas a viajar,<br> estaremos para servirte.</h3>
+      <p class="text-muted">Mereces que tus vacaciones sean memorables, mereces todo el disfrute, calidad y confort que sólo nuestro Hotel te puede ofrecer, simplemente lo mereces…</p>
      
     </div>
     <div class="row row-cols-1 row-cols-sm-2 g-4">
+      
+      <div class="d-flex flex-column gap-2">
+        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+          <svg class="bi" width="1em" height="1em">
+            <use xlink:href="#table"></use>
+          </svg>
+        </div>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\hot-pool.png' %}" alt="login-icon" style="height: 2rem" />Jacuzzi</h4>
+        <p class="text-muted">La vida se disfruta más saliendo de nuestro jacuzzi.</p>
+      </div>
       <div class="d-flex flex-column gap-2">
         <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
           <svg class="bi" width="1em" height="1em">
             <use xlink:href="#collection"></use>
           </svg>
         </div>
-        <h4 class="fw-semibold mb-0">Featured title</h4>
-        <p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+        
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\sports.png' %}" alt="login-icon" style="height: 2rem" />Recreación y Deporte</h4>
+        <p class="text-muted">Ven y disfruta de nuestras areas recreacionales disponibles para toda la familia.</p>
       </div>
 
       <div class="d-flex flex-column gap-2">
@@ -96,8 +105,8 @@
             <use xlink:href="#gear-fill"></use>
           </svg>
         </div>
-        <h4 class="fw-semibold mb-0">Featured title</h4>
-        <p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\restaurant.png' %}" alt="login-icon" style="height: 2rem" />Restaurante</h4>
+        <p class="text-muted">No hay amor más sincero que el que sentimos por la comida Huilense. </p>
       </div>
 
       <div class="d-flex flex-column gap-2">
@@ -106,22 +115,13 @@
             <use xlink:href="#speedometer"></use>
           </svg>
         </div>
-        <h4 class="fw-semibold mb-0">Featured title</h4>
-        <p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
+        <h4 class="fw-semibold mb-0"><img src="{% static 'icons\dumbbell.png' %}" alt="login-icon" style="height: 2rem" />Gimnasio</h4>
+        <p class="text-muted">Un gimnasio pensado en ti, cuida tu cuerpo y mantente saludable.</p>
       </div>
 
-      <div class="d-flex flex-column gap-2">
-        <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-          <svg class="bi" width="1em" height="1em">
-            <use xlink:href="#table"></use>
-          </svg>
-        </div>
-        <h4 class="fw-semibold mb-0">Featured title</h4>
-        <p class="text-muted">Paragraph of text beneath the heading to explain the heading.</p>
-      </div>
     </div>
   </div>
-
+</div>
   <!--inicio button2 pqrs-->
   <div class="text-center  my-3 pb-3">
     <button type="button1"id="button1" class="btn   btn-outline-light w-25"><a href="{% url 'pqrs-registrada' %}"style="color: white;">PQRS</a> 
@@ -150,9 +150,11 @@
             </div>
           </div>
           <div class="col-md-6 p-4 ps-md-0" id="col-md-6 ">
-            <h5 class="mt-5">Columns with stretched link</h5>
+            <h5 class="mt-5">Ubicación</h5>
             <br>
-            <p style="text-align:left;">Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
+            <p style="text-align:left;">Bienvenidos al Hotel la Gran Estación, donde la magia del ocaso y el encanto Huilense,
+              cobran vida en cada rincón. Brindando una experiencia inolvidable que redefine la vivencia de Hobo.</p>
+              <br>Estamos ubicados al sur kilómetro 1 via Gigante, un sector lleno de paz y tranquilidad.
           </div>
         </div>
         <p></p>

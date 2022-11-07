@@ -6,9 +6,8 @@
   <main>
     <div class="py-5 text-center">
       <h2 class="pt-5">¡Reserva Ahora!</h2>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s
-        form controls. Each required form group has a validation state that can
-        be triggered by attempting to submit the form without completing it.</p>
+      <p class="lead">Reservar el hotel adecuado es uno de los factores más importantes cuando se trata de aprovechar al máximo tus vacaciones.
+      <br class="lead"> No pierdas la oportunidad de alojarte con nosotros, disfruta de tú estadía en uno de los mejores hoteles de Hobo. <br> Que esperas para realizar tú reserva. </p>
     </div>
 
     <div class="row g-5 justify-content-center">
@@ -68,8 +67,8 @@
             </div>
             <div class="col-sm-6 pb-4">
               <label for="lastName" class="form-label">Cant Habitaciones</label>
-              <input type="numbrer" class="form-control" id="lastName"
-                placeholder="" value="" required="">
+              <input type="number"class="form-control" id="tentacles" name="tentacles"min="1" max="9">
+                <label for="tentacles"></label>
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
@@ -95,12 +94,14 @@
               </div>
             </div>
             <div class="col-md-6" style="padding-top: 28px; text-align: end;">
-              <div class="form-check" >
-                <input type="checkbox" class="form-check-input"id="same-address">
-                <label class="form-check-label " for="same-address">Aire
-                  Acondicionado</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Aire Acondicionado</label>
               </div>
             </div>
+            
+
+
             <hr class="my-4">
           </div>
 
