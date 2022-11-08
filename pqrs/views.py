@@ -51,3 +51,6 @@ def pqrs_eliminar(request, pk):
      
     }
     return render(request,'pqrs/pqrs.html',context)
+
+
+   

@@ -2,278 +2,224 @@
 {% load static %}
 
 {% block contenido %}
-<!-- Main content -->
 <section class="content">
-    <div class="container">
-        <!-- Small boxes (Stat box) -->
+    <div class="container-fluid">
+
         <div class="row">
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                    <div class="inner">
-                        <h3>150</h3>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1"><i
+                            class="fas fa-bed"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Habitaciones </span>
+                        <span class="info-box-number">
+                            50
+                            <small>%</small>
+                        </span>
+                    </div>
 
-                        <p>Habitaciones Disponibles</p>
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-danger elevation-1"><i
+                            class="fas fa-comments"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">PQRS</span>
+                        <span class="info-box-number">3</span>
                     </div>
-                    <div class="icon">
-                        <i class="nav-icon fas fa-bed"></i>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-success elevation-1"><i
+                            class="fas fa-calendar-check"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Reservaciones</span>
+                        <span class="info-box-number">30</span>
                     </div>
-                    <a href="#" class="small-box-footer">Más Información<i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-success">
-                    <div class="inner">
-                        <h3>53<sup style="font-size: 20px"></sup></h3>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-warning elevation-1"><i
+                            class="fas fa-user-check" style="color: white;"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Usuarios</span>
+                        <span class="info-box-number">2</span>
+                    </div>
 
-                        <p>Habitaciones Ocupadas</p>
-                    </div>
-                    <div class="icon">
-                        <i class="nav-icon fas fa-clock"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">Más Información<i class="fas fa-arrow-circle-right"></i></a>
                 </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-warning">
-                    <div class="inner">
-                        <h3>44</h3>
 
-                        <p>Usuarios Registrados</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-person-add"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">Más Información<i class="fas fa-arrow-circle-right"></i></a>
-                </div>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                        <h3>02</h3>
 
-                        <p>PQRS</p>
-                    </div>
-                    <div class="icon">
-                        <i class="nav-icon fas fa-comments"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">Más Información<i class="fas fa-arrow-circle-right"></i></a>
-                </div>
-            </div>
-            <!-- ./col -->
-       
-            <!-- /.row -->
-            <!-- Main row -->
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h5 class="card-title">Monthly Recap Report</h5>
                         <div class="card-tools">
-                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                            <i class="fas fa-minus"></i>
+                            <button type="button" class="btn btn-tool"
+                                data-card-widget="collapse">
+                                <i class="fas fa-minus"></i>
                             </button>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-                            <i class="fas fa-wrench"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" role="menu">
-                                <a href="#" class="dropdown-item">Action</a>
-                                <a href="#" class="dropdown-item">Another action</a>
-                                <a href="#" class="dropdown-item">Something else here</a>
-                                <a class="dropdown-divider"></a>
-                                <a href="#" class="dropdown-item">Separated link</a>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-tool
+                                    dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fas fa-wrench"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right"
+                                    role="menu">
+                                    <a href="#" class="dropdown-item">Action</a>
+                                    <a href="#" class="dropdown-item">Another
+                                        action</a>
+                                    <a href="#" class="dropdown-item">Something
+                                        else here</a>
+                                    <a class="dropdown-divider"></a>
+                                    <a href="#" class="dropdown-item">Separated
+                                        link</a>
+                                </div>
                             </div>
-                        </div>
-                            <button type="button" class="btn btn-tool" data-card-widget="remove">
-                            <i class="fas fa-times"></i>
+                            <button type="button" class="btn btn-tool"
+                                data-card-widget="remove">
+                                <i class="fas fa-times"></i>
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-8">
-                            <p class="text-center">
-                            <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                            </p>
-                            <div class="chart"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                            
-                            <canvas id="salesChart" height="180" style="height: 180px; display: block; width: 643px;" width="643" class="chartjs-render-monitor"></canvas>
+                                <p class="text-center">
+                                    <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                                </p>
+                                <div class="chart"><div
+                                        class="chartjs-size-monitor"><div
+                                            class="chartjs-size-monitor-expand"><div
+                                                class=""></div></div><div
+                                            class="chartjs-size-monitor-shrink"><div
+                                                class=""></div></div></div>
+                                    <canvas id="salesChart" height="180"
+                                        style="height: 180px; display: block;
+                                        width: 477px;" width="477"
+                                        class="chartjs-render-monitor"></canvas>
+                                </div>
+
                             </div>
-                            
-                            </div>
-                    
+
                             <div class="col-md-4">
                                 <p class="text-center">
-                                <strong>Goal Completion</strong>
+                                    <strong>Goal Completion</strong>
                                 </p>
-                                            <div class="progress-group">
-                                                Add Products to Cart
-                                                <span class="float-right"><b>160</b>/200</span>
-                                                    <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-primary" style="width: 80%"></div>
-                                                </div>
-                                            </div>
-                                
-                                            <div class="progress-group">
-                                            Complete Purchase
-                                                <span class="float-right"><b>310</b>/400</span>
-                                                    <div class="progress progress-sm">
-                                                        <div class="progress-bar bg-danger" style="width: 75%"></div>
-                                                    </div>
-                                            </div>
-                                
-                                            <div class="progress-group">
-                                                    <span class="progress-text">Visit Premium Page</span>
-                                                    <span class="float-right"><b>480</b>/800</span>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success" style="width: 60%"></div>
-                                                </div>
-                                            </div>
-                                
-                                            <div class="progress-group">
-                                            Send Inquiries
-                                                    <span class="float-right"><b>250</b>/500</span>
-                                                    <div class="progress progress-sm">
-                                                        <div class="progress-bar bg-warning" style="width: 50%"></div>
-                                                    </div>
-                                            </div>
-                            </div>                    
-                        </div>
-                    </div>
-                    
-                    <div class="card-footer">
-                    <div class="row">
-                    <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
-                    <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
-                    <h5 class="description-header">$35,210.43</h5>
-                    <span class="description-text">TOTAL REVENUE</span>
-                    </div>
-                    
-                    </div>
-                    
-                    <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
-                    <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
-                    <h5 class="description-header">$10,390.90</h5>
-                    <span class="description-text">TOTAL COST</span>
-                    </div>
-                    
-                    </div>
-                    
-                    <div class="col-sm-3 col-6">
-                    <div class="description-block border-right">
-                    <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
-                    <h5 class="description-header">$24,813.53</h5>
-                    <span class="description-text">TOTAL PROFIT</span>
-                    </div>
-                    
-                    </div>
-                    
-                    <div class="col-sm-3 col-6">
-                    <div class="description-block">
-                    <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
-                    <h5 class="description-header">1200</h5>
-                    <span class="description-text">GOAL COMPLETIONS</span>
-                    </div>
-                    
-                    </div>
-                    </div>
-                    
-                    </div>
-                    
-                </div>
-            <main>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="card">
-                            <div class="card-header border-0 ">
-                                <div class="d-flex justify-content-between">
-                                    <h3 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ventas</font></font></h3>
-                                    <a href="javascript:void(0);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver informe</font></font></a>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <p class="d-flex flex-column">
-                                        <span class="text-bold text-lg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$ 18,230.00</font></font></span>
-                                        <span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ventas a lo largo del tiempo</font></font></span>
-                                    </p>
-                                    <p class="ml-auto d-flex flex-column text-right">
-                                        <span class="text-success">
-                                        <i class="fas fa-arrow-up"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">33,1%
-                                        </font></font></span>
-                                        <span class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Desde el mes pasado</font></font></span>
-                                    </p>
-                                </div>
-                                
-                                <div class="position-relative mb-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                    <canvas id="sales-chart" height="200" style="display: block; width: 643px; height: 200px;" width="643" class="chartjs-render-monitor"></canvas>
-                                </div>
-                                <div class="d-flex flex-row justify-content-end">
-                                    <span class="mr-2">
-                                    <i class="fas fa-square text-primary"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Este año
-                                    </font></font></span>
-                                    <span>
-                                    <i class="fas fa-square text-gray"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">año pasado
-                                    </font></font></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
-
-                    <div class="col-lg-6">
-                        <div class="card ">
-                            <div class="card-header border-0 ui-sortable-handle" style="cursor: move;">
-                                <h3 class="card-title">
-                                    <i class="far fa-calendar-alt"></i>
-                                    Calendar
-                                </h3>
-                            
-                                <div class="card-tools">
-                                
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                                            <i class="fas fa-bars"></i>
-                                        </button>
-                                        <div class="dropdown-menu" role="menu">
-                                            <a href="#" class="dropdown-item">Add new event</a>
-                                            <a href="#" class="dropdown-item">Clear events</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a href="#" class="dropdown-item">View calendar</a>
-                                        </div>
+                                <div class="progress-group">
+                                    Add Products to Cart
+                                    <span class="float-right"><b>160</b>/200</span>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-primary"
+                                            style="width: 80%"></div>
                                     </div>
-                                    <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                                    <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                                    <i class="fas fa-times"></i>
-                                    </button>
                                 </div>
+
+                                <div class="progress-group">
+                                    Complete Purchase
+                                    <span class="float-right"><b>310</b>/400</span>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-danger"
+                                            style="width: 75%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-group">
+                                    <span class="progress-text">Visit Premium
+                                        Page</span>
+                                    <span class="float-right"><b>480</b>/800</span>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-success"
+                                            style="width: 60%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="progress-group">
+                                    Send Inquiries
+                                    <span class="float-right"><b>250</b>/500</span>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-warning"
+                                            style="width: 50%"></div>
+                                    </div>
+                                </div>
+
                             </div>
-                            
-                                <div class="card-body pt-0">
-                                
-                                        <div id="calendar" style="width: 100%"><div class="bootstrap-datetimepicker-widget usetwentyfour"><ul class="list-unstyled"><li class="show"><div class="datepicker"><div class="datepicker-days" style=""><table class="table table-sm"><thead><tr><th class="prev" data-action="previous"><span class="fa fa-chevron-left" title="Previous Month"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Month">October 2022</th><th class="next" data-action="next"><span class="fa fa-chevron-right" title="Next Month"></span></th></tr><tr><th class="dow">Su</th><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th></tr></thead><tbody><tr><td data-action="selectDay" data-day="09/25/2022" class="day old weekend">25</td><td data-action="selectDay" data-day="09/26/2022" class="day old">26</td><td data-action="selectDay" data-day="09/27/2022" class="day old">27</td><td data-action="selectDay" data-day="09/28/2022" class="day old">28</td><td data-action="selectDay" data-day="09/29/2022" class="day old">29</td><td data-action="selectDay" data-day="09/30/2022" class="day old">30</td><td data-action="selectDay" data-day="10/01/2022" class="day weekend">1</td></tr><tr><td data-action="selectDay" data-day="10/02/2022" class="day weekend">2</td><td data-action="selectDay" data-day="10/03/2022" class="day">3</td><td data-action="selectDay" data-day="10/04/2022" class="day">4</td><td data-action="selectDay" data-day="10/05/2022" class="day">5</td><td data-action="selectDay" data-day="10/06/2022" class="day">6</td><td data-action="selectDay" data-day="10/07/2022" class="day">7</td><td data-action="selectDay" data-day="10/08/2022" class="day weekend">8</td></tr><tr><td data-action="selectDay" data-day="10/09/2022" class="day weekend">9</td><td data-action="selectDay" data-day="10/10/2022" class="day">10</td><td data-action="selectDay" data-day="10/11/2022" class="day">11</td><td data-action="selectDay" data-day="10/12/2022" class="day">12</td><td data-action="selectDay" data-day="10/13/2022" class="day">13</td><td data-action="selectDay" data-day="10/14/2022" class="day">14</td><td data-action="selectDay" data-day="10/15/2022" class="day weekend">15</td></tr><tr><td data-action="selectDay" data-day="10/16/2022" class="day weekend">16</td><td data-action="selectDay" data-day="10/17/2022" class="day">17</td><td data-action="selectDay" data-day="10/18/2022" class="day">18</td><td data-action="selectDay" data-day="10/19/2022" class="day">19</td><td data-action="selectDay" data-day="10/20/2022" class="day">20</td><td data-action="selectDay" data-day="10/21/2022" class="day">21</td><td data-action="selectDay" data-day="10/22/2022" class="day weekend">22</td></tr><tr><td data-action="selectDay" data-day="10/23/2022" class="day weekend">23</td><td data-action="selectDay" data-day="10/24/2022" class="day">24</td><td data-action="selectDay" data-day="10/25/2022" class="day">25</td><td data-action="selectDay" data-day="10/26/2022" class="day">26</td><td data-action="selectDay" data-day="10/27/2022" class="day">27</td><td data-action="selectDay" data-day="10/28/2022" class="day">28</td><td data-action="selectDay" data-day="10/29/2022" class="day active today weekend">29</td></tr><tr><td data-action="selectDay" data-day="10/30/2022" class="day weekend">30</td><td data-action="selectDay" data-day="10/31/2022" class="day">31</td><td data-action="selectDay" data-day="11/01/2022" class="day new">1</td><td data-action="selectDay" data-day="11/02/2022" class="day new">2</td><td data-action="selectDay" data-day="11/03/2022" class="day new">3</td><td data-action="selectDay" data-day="11/04/2022" class="day new">4</td><td data-action="selectDay" data-day="11/05/2022" class="day new weekend">5</td></tr></tbody></table></div><div class="datepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fa fa-chevron-left" title="Previous Year"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Year">2022</th><th class="next" data-action="next"><span class="fa fa-chevron-right" title="Next Year"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectMonth" class="month">Jan</span><span data-action="selectMonth" class="month">Feb</span><span data-action="selectMonth" class="month">Mar</span><span data-action="selectMonth" class="month">Apr</span><span data-action="selectMonth" class="month">May</span><span data-action="selectMonth" class="month">Jun</span><span data-action="selectMonth" class="month">Jul</span><span data-action="selectMonth" class="month">Aug</span><span data-action="selectMonth" class="month">Sep</span><span data-action="selectMonth" class="month active">Oct</span><span data-action="selectMonth" class="month">Nov</span><span data-action="selectMonth" class="month">Dec</span></td></tr></tbody></table></div><div class="datepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fa fa-chevron-left" title="Previous Decade"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5" title="Select Decade">2020-2029</th><th class="next" data-action="next"><span class="fa fa-chevron-right" title="Next Decade"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectYear" class="year old">2019</span><span data-action="selectYear" class="year">2020</span><span data-action="selectYear" class="year">2021</span><span data-action="selectYear" class="year active">2022</span><span data-action="selectYear" class="year">2023</span><span data-action="selectYear" class="year">2024</span><span data-action="selectYear" class="year">2025</span><span data-action="selectYear" class="year">2026</span><span data-action="selectYear" class="year">2027</span><span data-action="selectYear" class="year">2028</span><span data-action="selectYear" class="year">2029</span><span data-action="selectYear" class="year old">2030</span></td></tr></tbody></table></div><div class="datepicker-decades" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" data-action="previous"><span class="fa fa-chevron-left" title="Previous Century"></span></th><th class="picker-switch" data-action="pickerSwitch" colspan="5">2000-2090</th><th class="next" data-action="next"><span class="fa fa-chevron-right" title="Next Century"></span></th></tr></thead><tbody><tr><td colspan="7"><span data-action="selectDecade" class="decade old" data-selection="2006">1990</span><span data-action="selectDecade" class="decade" data-selection="2006">2000</span><span data-action="selectDecade" class="decade" data-selection="2016">2010</span><span data-action="selectDecade" class="decade active" data-selection="2026">2020</span><span data-action="selectDecade" class="decade" data-selection="2036">2030</span><span data-action="selectDecade" class="decade" data-selection="2046">2040</span><span data-action="selectDecade" class="decade" data-selection="2056">2050</span><span data-action="selectDecade" class="decade" data-selection="2066">2060</span><span data-action="selectDecade" class="decade" data-selection="2076">2070</span><span data-action="selectDecade" class="decade" data-selection="2086">2080</span><span data-action="selectDecade" class="decade" data-selection="2096">2090</span><span data-action="selectDecade" class="decade old" data-selection="2106">2100</span></td></tr></tbody></table></div></div></li><li class="picker-switch accordion-toggle"></li></ul></div></div>
-                                </div>
-                            
+
                         </div>
+
                     </div>
+
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-sm-3 col-6">
+                                <div class="description-block border-right">
+                                    <span class="description-percentage
+                                        text-success"><i class="fas
+                                            fa-caret-up"></i> 17%</span>
+                                    <h5 class="description-header">$35,210.43</h5>
+                                    <span class="description-text">TOTAL REVENUE</span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-3 col-6">
+                                <div class="description-block border-right">
+                                    <span class="description-percentage
+                                        text-warning"><i class="fas
+                                            fa-caret-left"></i> 0%</span>
+                                    <h5 class="description-header">$10,390.90</h5>
+                                    <span class="description-text">TOTAL COST</span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-3 col-6">
+                                <div class="description-block border-right">
+                                    <span class="description-percentage
+                                        text-success"><i class="fas
+                                            fa-caret-up"></i> 20%</span>
+                                    <h5 class="description-header">$24,813.53</h5>
+                                    <span class="description-text">TOTAL PROFIT</span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-3 col-6">
+                                <div class="description-block">
+                                    <span class="description-percentage
+                                        text-danger"><i class="fas
+                                            fa-caret-down"></i> 18%</span>
+                                    <h5 class="description-header">1200</h5>
+                                    <span class="description-text">GOAL
+                                        COMPLETIONS</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-            </main>
-                <!-- /.card -->
-            <!-- right col -->
+
+            </div>
+
         </div>
-        <!-- /.row (main row) -->
-    </div><!-- /.container-fluid -->
+
+
+    </div>
 </section>
-<!-- /.content -->
 {% endblock contenido %}
-                          

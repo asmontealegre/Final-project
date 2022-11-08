@@ -1,23 +1,15 @@
 {% load static %}
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #191970">
+<aside class="main-sidebar sidebar-dark-primary elevation-4 py-3" style="background-color: #191970">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
     <img src="{% static '\img\logo.png' %}" alt="login-icon" style="height: 3rem" style="opacity: .8"></i>
-    <span class="brand-text font-weight-light">Hotel La Estacion</span>
+    <span class="brand-text font-weight-light">La Gran Estación</span>
   </a>
 
   <!-- Sidebar -->
   <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <i class="nav-icon mt-2 fas fa-user " style="color:white"></i>
-      </div>
-      <div class="info">
-        <a href="#" class="d-block " style="">Angelica Sofia</a>
-      </div>
-    </div>
+    
 
  
     <!-- Sidebar Menu -->
@@ -26,6 +18,14 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
+
+        <li class="nav-header">Administración</li>    
+        <li class="nav-item">
+              <a href="{% url 'usuarios-crear' %}" class="nav-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>Tablero Principal</p>
+              </a>
+            </li>
 
         <li class="nav-header">Usuarios</li>   
             
