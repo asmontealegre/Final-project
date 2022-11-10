@@ -6,20 +6,38 @@
   <main>
     <div class="py-5 text-center">
       <h2 class="pt-5">¡Reserva Ahora!</h2>
-      <p class="lead">Reservar el hotel adecuado es uno de los factores más importantes cuando se trata de aprovechar al máximo tus vacaciones.
-      <br class="lead"> No pierdas la oportunidad de alojarte con nosotros, disfruta de tú estadía en uno de los mejores hoteles de Hobo. <br> Que esperas para realizar tú reserva. </p>
+      <p class="lead">Reservar el hotel adecuado es uno de los factores más importantes cuando se trata de aprovechar al
+        máximo tus vacaciones.
+        <br class="lead"> No pierdas la oportunidad de alojarte con nosotros, disfruta de tú estadía en uno de los
+        mejores hoteles de Hobo. <br> Que esperas para realizar tú reserva.
+      </p>
     </div>
 
     <div class="row g-5 justify-content-center">
 
+      {% if reserva %}
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Reserva código {{reserva.id}}</h4>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">Nombres</label>
+            <p>{{reserva.nombres}}</p>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+      </div>
+      {% else %}
+
+
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Gestiona tú Reserva</h4>
-        <form class="needs-validation" novalidate="">
+        <form  method="POST">
+          {% csrf_token %}
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Nombres</label>
-              <input type="text" class="form-control" id="firstName"
-                placeholder="" value="" required="">
+              <input type="text" class="form-control" id="firstName" name="nombres">
               <div class="invalid-feedback">
                 Valid first name is required.
               </div>
@@ -27,8 +45,7 @@
 
             <div class="col-sm-6">
               <label for="lastName" class="form-label">Apellidos</label>
-              <input type="text" class="form-control" id="lastName"
-                placeholder="" value="" required="">
+              <input type="text" class="form-control" id="lastName" name="apellidos">
               <div class="invalid-feedback">
                 Valid last name is required.
               </div>
@@ -37,8 +54,7 @@
             <div class="col-sm-6">
               <label for="username" class="form-label">Cedúla de Ciudadanía</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="username"
-                  placeholder="" required="">
+                <input type="text" class="form-control" id="username" name="numeroDocumento">
                 <div class="invalid-feedback">
                   Your username is required.
                 </div>
@@ -48,8 +64,7 @@
             <div class="col-sm-6">
               <label for="username" class="form-label">Teléfono</label>
               <div class="input-group has-validation">
-                <input type="text" class="form-control" id="username"
-                  placeholder="" required="">
+                <input type="text" class="form-control" id="username" name="telefono">
                 <div class="invalid-feedback">
                   Your username is required.
                 </div>
@@ -57,67 +72,143 @@
             </div>
 
             <div class="col-sm-6 ">
-              <label for="email" class="form-label">Email <span
-                  class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email"
+              <label for="f-ingreso" class="form-label">Fecha de Ingreso</label>
+              <input type="date" class="form-control" id="f-ingreso" name="fechaIngreso"
                 placeholder="usuario@ejemplo.com">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
             </div>
-            <div class="col-sm-6 pb-4">
-              <label for="lastName" class="form-label">Cant Habitaciones</label>
-              <input type="number"class="form-control" id="tentacles" name="tentacles"min="1" max="9">
-                <label for="tentacles"></label>
+            <div class="col-sm-6 ">
+              <label for="f-salida" class="form-label">Fecha de Salida</label>
+              <input type="date" class="form-control" id="f-salida" name="fechaSalida"
+                placeholder="usuario@ejemplo.com">
               <div class="invalid-feedback">
-                Valid last name is required.
+                Please enter a valid email address for shipping updates.
               </div>
+            </div>
+            <div class="col-sm-6 ">
+              <label for="email" class="form-label">Email <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="usuario@ejemplo.com" name="correo">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+            <div class="col-sm-8 ">
+              <button class="btn btn-success" name="abrir-reserva">Abrir Reserva</button>
             </div>
           </div>
 
-          
-       
+        </form>
+        {% endif %}
 
+
+        {% if reserva %}
+        <hr class="my-4">
+        <h3>Recuerda que:</h3>
+        <div class="d-flex justify-content-around">
+          <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Secilla</div>
+            <div class="card-body">
+              <h5 class="card-title">Habitación Sencilla</h5>
+              <p class="card-text">Maximo 2 personas</p>
+            </div>
+          </div>
+          <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Doble</div>
+            <div class="card-body">
+              <h5 class="card-title">Habitación Doble</h5>
+              <p class="card-text">Maximo 4 personas</p>
+            </div>
+          </div>
+          <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Especial</div>
+            <div class="card-body">
+              <h5 class="card-title">Habitación Especial</h5>
+              <p class="card-text">Maximo 9 personas</p>
+            </div>
+          </div>
+
+        </div>
+        <p>* El aire acondicionado genera costos adicionales</p>
+        <form method="POST">
+          {% csrf_token %}
           <div class="row">
-            <hr class="my-4">
-            
-            <div class="col-md-5">
-              <label for="country" class="form-label">Tipo Habitación</label>
-              <select class="form-select" id="country" required="">
-                <option value="">...</option>
-                <option>Sencilla</option>
-                <option>Doble</option>
-                <option>Especial</option>
+            <label for="habitacion" class="form-label">Tipo Habitación</label>
+
+            <div class="col-md-3">
+              <select class="form-select" id="habitacion" required="" name="habitacion">
+                <option value="" disabled>...</option>
+                <option value="Sencilla">Sencilla</option>
+                <option value="Doble">Doble</option>
+                <option value="Campestre">Campestre</option>
               </select>
               <div class="invalid-feedback">
                 Please select a valid country.
               </div>
             </div>
-            <div class="col-md-6" style="padding-top: 28px; text-align: end;">
+            <!-- <div class="col-md-3 d-flex flex-row-reverse align-items-center">
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Aire Acondicionado</label>
               </div>
+            </div> -->
+            <div class="col-md-2 d-flex flex-row-reverse align-items-center">
+              <div class="form-check form-switch">
+                <label class="form-check-label" for="cantidad">Cantidad</label>
+
+                <input  class="form-control"  type="number" id="cantidad" name="cantidad">
+               
+              </div>
             </div>
-            
+            <div class="col-md-4 d-flex flex-row-reverse align-items-center">
+              <div class="form-check form-switch">
+                <button class="btn btn-primary" name="agregar-habitacion">Agregar</button>
+              </div>
+            </div>
 
 
             <hr class="my-4">
           </div>
+        </form>
 
 
-          
 
-          <div class="row">
+        <div class="row">
           <h4 class="mb-3">Detalles de la reserva</h4>
 
+          <table>
+            <thead>
+              <th>Habitación</th>
+              <th>Tipo</th>
 
+              <th>Complemento</th>
+              <th>Valor</th>
+            </thead>
+            <tbody>
+
+              {% for reserva in reservas %}
+              <tr>
+                <td>{{reserva.habitacion}}</td>
+                <td>{{reserva.habitacion.tipoHabitacion}}</td>
+                <td>{{reserva.habitacion.tipoHabitacion.complementosTipoHabitacion}}</td>
+                <td>{{reserva.habitacion.tipoHabitacion.valorTipoHabitacion}}</td>
+              </tr>
+              {% endfor %}
+
+
+            </tbody>
+          </table>
 
 
           <hr class="my-4">
         </div>
+        {% endif %}
+      </div>
+    </div>
+
+
   </main>
 
-      
 
-      {% endblock contenido %}
+  {% endblock contenido %}
