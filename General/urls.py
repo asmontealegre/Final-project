@@ -19,15 +19,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import handler404
-from General.views import  error_404, inicio
+from General.views import  error_404 
 
-
+from General.views import loggedIn,logout
+from django.contrib.auth.views import LoginView as login
 
 handler404= error_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",inicio , name="inicio"),
+    path("",login.as_view(),name="inicio"),
     path('promocion/', include('promocion.urls')),
     path('servicios/',include('servicios.urls')),
     path('adm/',include('administracion.urls')),
@@ -35,6 +36,11 @@ urlpatterns = [
     path('reser/',include('reserva.urls')),
     path('habit/',include('habitacion.urls')),
     path('pqrs/',include('pqrs.urls')),
+
+    path('loggedin/',loggedIn,name="inicio-sesion"),
+    path('logout/',logout,name="fin-sesion"),
+    
+
+
     
 ]
-

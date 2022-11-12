@@ -1,0 +1,81 @@
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'css/adminlte.min.css' %}">
+    <title>Sistema de Inventario - SENA</title>
+</head>
+
+
+<body class="login-page" style="background-color: #191970">
+    <div class="login-box">
+
+        <div class="card card-outline card-white">
+            <div class="card-header text-center">
+              <div class="d-flex justify-content-center ">
+                <img src="/static/img/logo.png" alt="login-icon" style="height: 8rem" />
+              </div>
+                <a class="text-center fs-1 fw-bold" style="color: #191970 ;">Iniciar Sesión</a>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3 w-100">
+                      <div class="input-group-text " style="background-color: #191970;">
+                        <img src="/static/icons/username-icon.svg" alt="login-icon" style="height: 1rem" />
+                      </div>
+                        {{form.username}}
+                        <div class="input-group-append ">
+                        </div>
+                    </div>
+                    <div class="input-group mb-2">
+                      
+                      <div class="input-group-text" style="background-color: #191970;">
+                        <img src="/static/icons/padlock-64.ico" alt="login-icon" style="height: 1rem" />
+                      </div>
+                        {{form.password}}
+                        <div class="input-group-append">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 mb-3">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Recordarme
+                                </label>
+                            </div>
+                        </div>
+                    <div class="text-center ">
+                        <input type="submit" class="btn btn-info text-white w-50 mt-1 fw-semibold shadow-sm"
+                        style="background-color: #191970;" value="Iniciar Sesión">
+                    </div>
+                </form>
+                <div class="d-flex justify-content-center mt-2">
+                  <div>No tienes una cuenta?</div>
+                </div>
+                <div class="mt-1">
+                  <div class=" text-center" style="height: 0.9rem">
+                    <span class="bg-white ">--------------</span>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
