@@ -5,6 +5,7 @@ from django.db import models
 from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import User 
 
 # Create your models here.
 
@@ -25,6 +26,8 @@ class Tipo_Usuario(models.Model):
 class Usuario(models.Model):
     nombres=models.CharField(max_length=45, verbose_name="Nombres") 
     apellidos=models.CharField(max_length=45, verbose_name="Apellidos")
+    email= models.EmailField(max_length=150, verbose_name='correo')
+
     class TipoDocumento(models.TextChoices):
         CC='C.C', _('Cédula de Ciudadanía')
         CE='C.E', _('Cédula de Extrangeriía')
@@ -44,3 +47,4 @@ class Usuario(models.Model):
         ACTIVO=1, ('Activo')
         INACTIVO=0, ('Inactivo')
     estado=models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
+    user=models.ForeignKey(User, on_delete= models.CASCADE)
