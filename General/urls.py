@@ -27,7 +27,7 @@ handler404= error_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",inicio , name="inicio"),
+    path("",inicio , name="entrar"),
     path('promocion/', include('promocion.urls')),
     path('servicios/',include('servicios.urls')),
     path('adm/',include('administracion.urls')),

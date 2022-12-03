@@ -30,7 +30,7 @@ class Usuario(models.Model):
 
     class TipoDocumento(models.TextChoices):
         CC='C.C', _('Cédula de Ciudadanía')
-        CE='C.E', _('Cédula de Extrangeriía')
+        CE='C.E', _('Cédula de Extrangería')
         PP='P.P', _('Pasaporte')
         TI='T.I', _('Tarjeta de Identidad')
         OT='Otro', _('Otro Tipo de Documento')
