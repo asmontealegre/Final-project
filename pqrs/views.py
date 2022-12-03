@@ -1,4 +1,4 @@
-from tkinter.tix import Form
+
 from django.shortcuts import render, redirect
 from pqrs.forms import PQRSForms
 
@@ -20,7 +20,7 @@ def pqrs(request):
  
 def pqrs_registrada(request):
     titulo="PQRS Registradas"
-    if request.method == "POST":
+    if request.method=="POST" and 'form_pqrs_registrada' in request.POST:
         form= PQRSForms(request.POST)
         if form.is_valid():
             form.save()
@@ -51,6 +51,10 @@ def pqrs_eliminar(request, pk):
      
     }
     return render(request,'pqrs/pqrs.html',context)
+
+
+
+
 
 
    

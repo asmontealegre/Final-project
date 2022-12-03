@@ -1,4 +1,5 @@
 {% extends "partials/body.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block contenido %}
@@ -122,12 +123,12 @@
     </div>
   </div>
 </div>
-  <!--inicio button2 pqrs-->
-  <div class="text-center  my-3 pb-3">
-    <button type="button1"id="button1" class="btn   btn-outline-light w-25"><a href="{% url 'pqrs-registrada' %}"style="color: white;">PQRS</a> 
-    </button>
-  </div>
-  <!--fin button2 pqrs-->
+ <!--inicio button2 pqrs-->
+ <div class="text-center  my-3 pb-3">
+  <button type="button1"id="button1" class="btn   btn-outline-light w-25"><a href="{% url 'pqrs-registrada' %}"style="color: white;">PQRS</a> 
+  </button>
+</div>
+<!--fin button2 pqrs-->
   
   <!--container info puntual-->
         <div class="container  ">

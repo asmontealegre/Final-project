@@ -30,12 +30,12 @@
               <div class="d-flex justify-content-center ">
                 <img src="/static/img/logo.png" alt="login-icon" style="height: 8rem" />
               </div>
-                <a class="text-center fs-1 fw-bold" style="color: #191970 ;">Iniciar Sesión</a>
+                <a class="text-center fs-1 fw-bold " style="color: #191970 ;">Iniciar Sesión</a>
                 <form method="post">
                     {% csrf_token %}
                     <div class="input-group mb-3 w-100">
-                      <div class="input-group-text " style="background-color: #191970;">
-                        <img src="/static/icons/username-icon.svg" alt="login-icon" style="height: 1rem" />
+                      <div class="input-group-text " style="background-color: #191970; ">
+                        <img src="/static/icons/username-icon.svg" alt="login-icon" style="height: 1rem;" />
                       </div>
                         {{form.username}}
                         <div class="input-group-append ">
@@ -51,7 +51,7 @@
                       </div>
                     </div>
                     <div class="row">
-                        <div class="col-8 mb-3">
+                        <div class="col-12 mb-3">
                             <div class="icheck-primary">
                                 <input type="checkbox" id="remember">
                                 <label for="remember">
