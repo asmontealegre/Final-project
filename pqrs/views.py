@@ -20,6 +20,7 @@ def pqrs(request):
  
 def pqrs_registrada(request):
     titulo="PQRS Registradas"
+    
     if request.method=="POST" and 'form_pqrs_registrada' in request.POST:
         form= PQRSForms(request.POST)
         if form.is_valid():
@@ -30,8 +31,8 @@ def pqrs_registrada(request):
     else:
         form=PQRSForms()
     context={
+        
         'titulo':titulo,
-        'form': form
     }
     return render(request,'pqrs/pqrs-registrada.html',context)
 

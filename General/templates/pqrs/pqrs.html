@@ -1,6 +1,3 @@
-
-
-
 {% extends 'partials/bodyAdmin.html' %}
 
 {% load static %}
@@ -13,35 +10,34 @@
             <table id="tabla-general" class="table">
                 
                 <thead>
-                    <tr>
+                    
                     <th scope="col">Nombres</th>
-              <th scope="col">Apellidos</th>
-              <th scope="col">Télefono</th>
-              <th scope="col">Correo Electronico</th>
-              <th scope="col">Asunto</th>
-              <th scope="col">Comentario del Cliente</th>
-              <th scope="col">Fecha</th>
-              <th scope="col">Estado</th>
-              <th scope="col">Acciones</th>
-               </tr>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Télefono</th>
+                    <th scope="col">Correo Electronico</th>
+                    <th scope="col">Asunto</th>
+                    <th scope="col">Comentario del Cliente</th>
+                    <th scope="col">Fecha</th>
+                    
+                    <th scope="col">Acciones</th>
                 </thead>
                 <tbody>
                     
-                   {% for PQRS in pqrs %}
+            {% for PQRS in pqrs %}
             <tr>
-              {% if PQRS.estado == '1' %}
+            {% if PQRS.estado == '1' %}
 
-              <td>{{PQRS.nombres}}</td>
-              <td>{{PQRS.apellidos}}</td>
-              <td>{{PQRS.telefono}}</td>
-              <td>{{PQRS.email}}</td>
-              <td>{{PQRS.asunto}}</td>
-              <td>{{PQRS.comentarioCliente}}</td>
-              <td>{{PQRS.fechaCreacion}}</td>
-              <td>{{PQRS.Estado}}</td>
-              <td >
-                <a class="btn btn-" href="{% url 'pqrs-eliminar' PQRS.id %}"><i class="fas  fa-trash-alt"></i></td>
-                  {% endif %}  
+                <td>{{PQRS.nombres}}</td>
+                <td>{{PQRS.apellidos}}</td>
+                <td>{{PQRS.telefono}}</td>
+                <td>{{PQRS.email}}</td>
+                <td>{{PQRS.asunto}}</td>
+                <td>{{PQRS.comentarioCliente}}</td>
+                <td>{{PQRS.fechaCreacion}}</td>
+                
+                <td >
+                    <a class="btn btn-" href="{% url 'pqrs-eliminar' PQRS.id %}"><i class="fas  fa-trash-alt"></i></td>
+                    {% endif %}  
             </tr>
             {% endfor %}
                 </tbody>

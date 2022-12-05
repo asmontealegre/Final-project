@@ -81,3 +81,22 @@ def abrir_reserva_usuario(request, pk=None):
         'reservas': reservas
     }
     return render(request, 'reserva/reservar-formulario.html', context)
+
+
+def reserva_eliminar(request, pk):
+    titulo="Reserva - Eliminar"
+    reserva= Reserva.objects.all()
+
+    Reserva.objects.filter(id=pk).update(
+            estado='0'
+        )
+    return redirect('reservar')
+        
+   
+    context={
+        'reserva':reserva,
+        'titulo':titulo,
+     
+    }
+    return render(request,'reserva/usuario-registrado.html',context)
+    

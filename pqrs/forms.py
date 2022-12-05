@@ -5,6 +5,6 @@ from pqrs.models import PQRS
 class PQRSForms(forms.ModelForm):
     class Meta:
         model=PQRS
-        fields='__all__'
+        exclude=["estado"]
         
         

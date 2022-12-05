@@ -5,23 +5,23 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
-        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4 overflow-auto ">
 
-            <table id="tabla-general" class="table">
+            <table id="tabla-general" class="table table-striped nowrap ">
                 
                 <thead>
-                    <tr>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">Cédula de ciudadanía</th>
-                    <th scope="col">Teléfono</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Cant Hab</th>
-                    <th scope="col">Número Hab</th>
-                    <th scope="col">Check-In</th>
-                    <th scope="col">Check-Out</th>
-                    <th scope="col">Metodo de Pago</th>
-                    <th scope="col">Precio</th>
+                    
+                    <th scope="">Nombres</th>
+                    <th scope="">Apellidos</th>
+                    <th scope="">Documento</th>
+                    <th scope="">Teléfono</th>
+                    <th scope="">Email</th>
+                    <th scope="">Fecha de Ingreso</th>
+                    <th scope="">Fecha de Salida</th>
+                    <th scope="">Precio</th>
+                    
+                    
+                    
                 </thead>
                 <tbody>
                     
@@ -33,13 +33,91 @@
                         <td>{{reserva.numeroDocumento}}</td>
                         <td>{{reserva.telefono}}</td>
                         <td>{{reserva.correo}}</td>
-                        <td>{{reserva.cantidadHabitaciones}}</td>
-                        <td>{{reserva.numeroHuespedes}}</td>
                         <td>{{reserva.fechaIngreso}}</td>
                         <td>{{reserva.fechaSalida}}</td>
-                        <td>{{reserva.metodoPago}}</td>
                         <td>{{reserva.valorReserva}}</td>
                         
+                        {% comment %} <td> 
+                        <div class="d-sm-flex justify-content-sm-center ">
+                        <button  data-bs-toggle="modal"data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="fas fa-edit"></i></a>
+                        </button><div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Datos del Ciente</h5>
+                                
+                                </div>
+                                <div class="modal-body">
+                                {% if reserva  %}
+                                <div class="row  ">
+                                    <div class="col-md-10 col-lg-11">
+
+                                    <form class="needs-validation" novalidate="">
+                                        <div class="row ">
+                                        <div class="col">
+                                            <label for="firstName">Nombres:</label>
+                                            {{reserva.nombres}}
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <label >Apellidos:</label>
+                                            {{reserva.apellidos}}
+                                            </div>
+                                        </div>
+
+                                        <div class="col">
+                                            <label for="lastName" > Cedúla de ciudadanía:</label>
+                                            {{reserva.numeroDocumento}}
+                                            </div>
+                                
+                                        </div>   
+
+                                        <div class="col">
+                                            <label for="lastName" > Teléfono:</label>
+                                            {{reserva.telefono}}
+                                        </div>    
+
+                                        <div class="col">
+                                            <label for="lastName" > Email:</label>
+                                            {{reserva.correo}}
+                                        </div>
+                                         <div class="modal-header">
+                                <h5 class="modal-title pt-4" id="exampleModalLabel">Datos de la Reserva</h5>
+                                
+                                </div>
+                                
+                                </div>
+                                        <div class="col">
+                                            <label for="lastName" > Fecha de Ingreso:</label>
+                                            {{reserva.fechaIngreso}}
+                                        </div>    
+
+                                        <div class="col">
+                                            <label for="lastName" > Fecha de Salida:</label>
+                                            {{reserva.fechaSalida}}
+                                        </div>   
+
+                                        <div class="col">
+                                            <label for="lastName" > Valor de la Reserva:</label>
+                                            {{reserva.valorReserva}}
+                                        </div> 
+
+                                        <div class="col">
+                                            <label for="lastName" > Estado:</label>
+                                            {{reserva.estado}}
+                                        </div>        
+                                    </form>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </td>{% endcomment %}
                     </tr>
                     {% endfor %}
                     
@@ -74,7 +152,9 @@
             "responsive": true, "lengthChange": false, "autoWidth": false,
             "buttons": [ "excel", "pdf", "print", ]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
+        $('#tabla-general').DataTable({ "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.12.1/i18n/es-MX.json",
+            }
             "paging": true,
             "lengthChange": false,
             "searching": false,
