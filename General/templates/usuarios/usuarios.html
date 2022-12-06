@@ -18,7 +18,7 @@
                         <th scope="">Número de Documento</th>
                         <th scope="">Télefono</th>
                         <th scope="">Tipo Usuario</th>
-                        <th scope="" >Estado</th>
+                        
                         <th scope="" class="text-center">Acciones</th>
                     </thead>
                     <tbody>
@@ -35,7 +35,7 @@
                             <td >{{usuario.numeroDocumento}}</td>
                             <td>{{usuario.telefono}}</td>
                             <td>{{usuario.tipoUsuario}}</td>
-                            <td class="text-center">{{usuario.estado}}</td>
+                            
                             <td ><a class="btn btn " href="{% url 'usuarios-editar' usuario.id %}"><i class="fas fa-edit"></i>
                             <a class="btn btn" href="{% url 'usuarios-eliminar' usuario.id %}"><i class="fas  fa-trash-alt"></i></td>
                             

@@ -100,3 +100,5 @@ def reserva_eliminar(request, pk):
     }
     return render(request,'reserva/usuario-registrado.html',context)
     
+
+        

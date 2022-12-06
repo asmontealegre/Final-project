@@ -29,19 +29,19 @@ class Usuario(models.Model):
     email= models.EmailField(max_length=150, verbose_name='correo')
 
     class TipoDocumento(models.TextChoices):
-        CC='C.C', _('Cédula de Ciudadanía')
-        CE='C.E', _('Cédula de Extrangería')
-        PP='P.P', _('Pasaporte')
-        TI='T.I', _('Tarjeta de Identidad')
-        OT='Otro', _('Otro Tipo de Documento')
-    tipoDocumento=models.CharField(max_length=5, choices=TipoDocumento.choices, default=TipoDocumento.CC, verbose_name="Tipo de Documento")
+        CC='Cédula de Ciudadanía', _('Cédula de Ciudadanía')
+        CE='Cédula de Extranjería', _('Cédula de Extranjería')
+        PP='Pasaporte', _('Pasaporte')
+        TI='Tarjeta de Identidad', _('Tarjeta de Identidad')
+        OT='Otro Tipo de Documento', _('Otro Tipo de Documento')
+    tipoDocumento=models.CharField(max_length=25, choices=TipoDocumento.choices, default=TipoDocumento.CC, verbose_name="Tipo de Documento")
     numeroDocumento=models.CharField(max_length=45, unique=True, verbose_name="Número de Documento")
     telefono=models.CharField(max_length=15, verbose_name="Teléfono", blank=True)
     
     class tipoUsuario(models.TextChoices):
-        Administrador='Administrador', _('Administrador')
-        Empleado='Empleado', _('Empleado')
-    tipoUsuario=models.CharField(max_length=13, choices=tipoUsuario.choices, default=tipoUsuario.Empleado, verbose_name="Tipo Usuario")
+        Administrador='Administración', _('Administrador')
+        Recepción='Recepción', _('Recepción')
+    tipoUsuario=models.CharField(max_length=20, choices=tipoUsuario.choices, default=tipoUsuario.Recepción, verbose_name="Tipo Usuario")
     
     class Estado(models.TextChoices):
         ACTIVO=1, ('Activo')
