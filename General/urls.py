@@ -20,7 +20,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import handler404
 from General.views import  error_404
-from General.views import inicio 
+from General.views import inicio
 
 
 handler404= error_404

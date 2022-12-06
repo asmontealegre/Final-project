@@ -1,24 +1,37 @@
 from django.shortcuts import render
+from reserva.models import Reserva
+from usuarios.models import Usuario
+from pqrs.models import PQRS
 
+def administracion(request):
+    titulo="Tablero Principal"
+    cantidad_reserva= Reserva.objects.all().count()
+    cantidad_usuarios= Usuario.objects.all().count()
+    cantidad_pqrs= PQRS.objects.all().count()
 
+    labels_stock=[]
+    data_stock=[]
+    reserva= Reserva.objects.all().order_by('nombres')
+    for reserva in reserva:
+        labels_stock.append(reserva.nombres)
+        data_stock.append(reserva.apellidos)
 
-# Create your views here.
+    context={
+        'titulo': titulo,
+        'cantidad_usuarios':cantidad_usuarios,
+        'cantidad_reserva':cantidad_reserva,
+        'cantidad_pqrs':cantidad_pqrs,
+        'labels_stock':labels_stock,
+        'data_stock':data_stock,
+    }
+    return render(request,'administracion/index-admin.html',context)
+
 
 
 def login(request):
     context={   
     }
     return render(request,'registration/login.html',context)
-
-
-
-def administracion(request):
-    titulo="Tablero Principal"
-    context={
-        'titulo': titulo
-    }
-    return render(request,'administracion/index-admin.html',context)
-
 
 def usuarios(request):
     titulo="Usuarios"
