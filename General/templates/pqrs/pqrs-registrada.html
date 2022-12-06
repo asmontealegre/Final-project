@@ -4,16 +4,17 @@
 {% load crispy_forms_tags %}
 
 {% block contenido %}
+<h2 class="pt-5 text-center pt-5 mt-5">Crear PQRS</h2>
+<div class="container  w-50 pt-3">
 
-<div class="container  w-50 pt-5 mt-5">
-
-
+<hr class="my-4">
+                  <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel">Datos del Cliente</h5>
                 <div class="row g-3">
                   <div class="col-sm-6">
                   <form  method='POST'>
                   {% csrf_token %}
                     <label class="form-label">Nombre</label>
-                    <input required="" type="text" class="form-control" id="id_nombres"
+                    <input required type="text" class="form-control" id="id_nombres"
                       name="nombres" placeholder="">
                     <div class="invalid-feedback">
 
@@ -32,7 +33,7 @@
                   <div class="col-sm-6">
                     <label class="form-label">Teléfono</label>
                     <div class="input-group has-validation">
-                      <input type="text" class="form-control" id="id_telefono"
+                      <input required type="number" class="form-control" id="id_telefono"
                         name="telefono">
                       <div class="invalid-feedback">
 
@@ -42,7 +43,7 @@
 
                   <div class="col-sm-6">
                     <label class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                    <input type="email" class="form-control" id="id_email"
+                    <input  required type="email" class="form-control" id="id_email"
                       name="email" placeholder="usuario@ejemplo.com">
                     <div class="invalid-feedback">
 
@@ -53,40 +54,39 @@
                   <h5 class="modal-title" id="exampleModalLabel">Datos de la PQRS</h5>
                   <div class="col-sm-6">
                     <label class="form-label">Asunto</label>
-                    <input type="text" class="form-control" id="id_asunto"
+                    <input  required type="text" class="form-control" id="id_asunto"
                       name="asunto" placeholder="">
                     <div class="invalid-feedback">
 
                     </div>
                   </div>
 
-                  <div class="col-sm-12">
+                  <div class="col-sm-12 ">
                     <label class="form-label">Comentario</label>
-                    <input  required type="text" class="form-control"
-                      id="id_comentarioCliente" name="comentarioCliente"
-                      placeholder="">
+                    <textarea required class="form-control" id="id_comentarioCliente" name="comentarioCliente" rows="3"></textarea>
+                    
                     <div class="invalid-feedback">
 
                     </div>
                   </div>
 
 
-                  <div class="col-sm-6">
+                  <div class="col-sm-6 pb-4">
                     <label class="form-label">Fecha<span class="text-muted"></span></label>
-                    <input type="date" class="form-control"
+                    <input required type="date" class="form-control"
                       id="id_fechaCreacion" name="fechaCreacion" placeholder="">
                   </div>
 
 
-                 <button  class="btn btn-primary" name="form_pqrs_registrada" value="Registrar" ></button>
+                
 
 
                 </div>
-             
+            <button  class="btn btn-primary  col-4 center " name="form_pqrs_registrada " value="Registrar" >Enviar</button>
 
         </form>
     </div>
-
+<div class="pb-5"></div>
   
 {% endblock contenido %}
 
